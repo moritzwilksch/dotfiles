@@ -8,7 +8,9 @@ ignore = [
     "ERA001",
     "PD901",
     "S101",
-    "T201"
+    "T201",
+    "PLR0913",
+    "INP001"
 ]
 
 # Exclude a variety of commonly ignored directories.
