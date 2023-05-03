@@ -10,7 +10,10 @@ ignore = [
     "S101",
     "T201",
     "PLR0913",
-    "INP001"
+    "INP001",
+    "ANN101",
+    "N803",
+    "N806"
 ]
 
 # Exclude a variety of commonly ignored directories.
@@ -39,9 +42,6 @@ exclude = [
 
 # Same as Black.
 line-length = 88
-
-# Assume Python 3.10.
-target-version = "py310"
 
 [mccabe]
 max-complexity = 10
