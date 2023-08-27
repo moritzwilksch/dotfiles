@@ -8,3 +8,15 @@
    - `vim-sneak`
    - `vim-surround`
    - `vim-slime` (Send text to tmux ipython REPL)
+3. Set darker color theme by changing that block:
+```lua
+   {
+    -- Theme inspired by Atom
+    'navarasu/onedark.nvim',
+    priority = 1000,
+    config = function()
+      require('onedark').setup {style = 'darker'}
+      vim.cmd.colorscheme 'onedark'
+    end,
+  }
+```
