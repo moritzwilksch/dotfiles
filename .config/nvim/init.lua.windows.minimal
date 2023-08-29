@@ -1,0 +1,17 @@
+-- C:\Users\USERNAME\AppData\Local\nvim\init.lua
+vim.wo.relativenumber = true
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+
+local call = vim.call
+local cmd = vim.cmd
+local Plug = vim.fn['plug#']
+local PATH = "C:\\Users\\USERNAME\\Documents\\moritz-nvim-data" --You can use any PATH which you prefer
+vim.cmd('language en_US')
+vim.api.nvim_command('set ignorecase')
+
+call('plug#begin', PATH)
+	Plug 'tpope/vim-sensible'
+    Plug 'justinmk/vim-sneak'
+    Plug 'tpope/vim-surround'
+call'plug#end'
