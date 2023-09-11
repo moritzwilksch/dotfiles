@@ -1,0 +1,268 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+r",
+        "command": "python.execInTerminal"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "alt+left",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "alt+right",
+        "command": "-workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "alt+right",
+        "command": "cursorWordEndRight",
+        "when": "textInputFocus && !accessibilityModeEnabled"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "-cursorWordEndRight",
+        "when": "textInputFocus && !accessibilityModeEnabled"
+    },
+    {
+        "key": "alt+left",
+        "command": "cursorWordEndLeft"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "cursorLineEnd"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "cursorLineStart"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "-cursorWordEndRightSelect",
+        "when": "textInputFocus && !accessibilityModeEnabled"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "-editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "editor.action.smartSelect.expand"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "cursorWordEndRightSelect"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "-editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "editor.action.smartSelect.shrink"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "cursorWordEndLeftSelect"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "-deleteWordLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "deleteWordLeft"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+pagedown",
+        "command": "-workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+pageup",
+        "command": "-workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-extension.vim_cmd+alt+down",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-jupyter.runcurrentcelladvance",
+        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-extension.vim_ctrl+t",
+        "when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-extension.vim_ctrl+w",
+        "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "extension.vim_ctrl+c",
+        "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
+    },
+    {
+        "key": "shift+enter",
+        "command": "jupyter.runcurrentcell",
+        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !jupyter.havenativecells && !notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-jupyter.runcurrentcell",
+        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !jupyter.havenativecells && !notebookEditorFocused"
+    },
+    {
+        "key": "shift+enter",
+        "command": "notebook.cell.executeAndFocusContainer",
+        "when": "notebookCellListFocused || editorTextFocus && inputFocus && notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-notebook.cell.executeAndFocusContainer",
+        "when": "notebookCellListFocused || editorTextFocus && inputFocus && notebookEditorFocused"
+    },
+    {
+        "key": "alt+y",
+        "command": "editor.debug.action.selectionToRepl"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-vscode-neovim.send-cmdline",
+        "when": "neovim.mode == 'cmdline'"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-vscode-neovim.send",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-vscode-neovim.send",
+        "when": "editorTextFocus && neovim.ctrlKeysInsert && neovim.mode == 'insert'"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-vscode-neovim.send-cmdline",
+        "when": "neovim.mode == 'cmdline'"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-vscode-neovim.send",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-vscode-neovim.send",
+        "when": "editorTextFocus && neovim.ctrlKeysInsert && neovim.mode == 'insert'"
+    },
+    {
+        "key": "space /",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                {
+                    "command": "workbench.action.terminal.sendSequence",
+                    "args": {
+                        "text": "sib '${file}'\n"
+                    }
+                },
+                "workbench.action.terminal.focus"
+            ]
+        },
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space s g",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                {
+                    "command": "workbench.action.terminal.sendSequence",
+                    "args": {
+                        "text": "sif\n"
+                    }
+                },
+                "workbench.action.terminal.focus"
+            ]
+        },
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space s f",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                {
+                    "command": "workbench.action.terminal.sendSequence",
+                    "args": {
+                        "text": "sf\n"
+                    }
+                },
+                "workbench.action.terminal.focus"
+            ]
+        },
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-inlineChat.start",
+        "when": "inlineChatHasProvider && !editorReadonly"
+    },
+    {
+        "key": "space e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    }
+    
+]
