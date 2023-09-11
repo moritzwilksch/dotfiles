@@ -214,7 +214,7 @@
                 {
                     "command": "workbench.action.terminal.sendSequence",
                     "args": {
-                        "text": "sib '${file}'\n"
+                        "text": "sb '${file}'\n"
                     }
                 },
                 "workbench.action.terminal.focus"
@@ -230,7 +230,7 @@
                 {
                     "command": "workbench.action.terminal.sendSequence",
                     "args": {
-                        "text": "sif\n"
+                        "text": "sg\n"
                     }
                 },
                 "workbench.action.terminal.focus"
