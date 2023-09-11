@@ -6,7 +6,7 @@ function sf() {
 }
 
 # search file by content, open in vscode
-function sif() {
+function sg() {
     rg --color=always --line-number --no-heading --smart-case "${*:-}" | fzf --ansi \
       --color "hl:-1:underline,hl+:-1:underline:reverse" \
       --delimiter : \
@@ -15,7 +15,7 @@ function sif() {
 }
 
 # search single file content, open in vscode
-function sib() {
+function sb() {
     rg --color=always --line-number --no-heading --smart-case --with-filename '' "${*:-}" | fzf --ansi \
       --color \
       --delimiter : \
