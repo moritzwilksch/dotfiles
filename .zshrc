@@ -21,3 +21,8 @@ function sb() {
       --delimiter : \
       --preview 'bat --color=always {1} --highlight-line {2} --line-range {2}:' | cut -d ':' -f1-2 | xargs -I {} code -r -g {}
 }
+
+# search files there in git version control, open in vscode
+function sfg() {
+  git ls-files | fzf --preview='batcat --color=always --style=numbers --line-range=:500 {}' | xargs -I {} code -r {}
+}
