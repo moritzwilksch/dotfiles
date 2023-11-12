@@ -15,7 +15,15 @@
     'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      require('onedark').setup {style = 'darker'}
+      require('onedark').setup {
+         style = 'darker',
+         colors = {
+          bg0 = "#101010",
+          purple = "#c549eb",
+          green = "#91db58",
+          red = "#f04351"
+        }
+      }
       vim.cmd.colorscheme 'onedark'
     end,
   }
