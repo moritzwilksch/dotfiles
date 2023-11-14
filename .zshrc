@@ -1,4 +1,4 @@
-alias umamba=micromamba
+alias mm=micromamba
 
 # search file by name, open in vscode
 function sf() {
