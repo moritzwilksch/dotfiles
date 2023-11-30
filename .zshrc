@@ -1,4 +1,6 @@
 alias mm=micromamba
+alias ipy='ipython'
+alias ipyi='ipython -i'
 
 # search file by name, open in vscode
 function sf() {
