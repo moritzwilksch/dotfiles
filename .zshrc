@@ -2,7 +2,7 @@ alias mm=micromamba
 
 # search file by name, open in vscode
 function sf() {
-    rg --color=always --smart-case --files | fzf --preview='bat --color=always --style=numbers --line-range=:500 {}' | xargs -I {} code -r {}
+    rg --smart-case --files | fzf --ansi --preview='bat --color=always --style=numbers --line-range=:500 {}' | xargs -I {} code -r {}
 }
 
 # search file by content, open in vscode
