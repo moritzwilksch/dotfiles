@@ -1,6 +1,7 @@
 {
   "[python]": {
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "editor.hover.delay": 150,
   "editor.quickSuggestionsDelay": 0,
@@ -126,28 +127,6 @@
   "editor.accessibilitySupport": "off",
   "git.ignoreRebaseWarning": true,
   "python.analysis.typeCheckingMode": "basic",
-  "vim.normalModeKeyBindings": [
-    {
-      "before": [
-        "C-d"
-      ],
-      "after": [
-        "C-d",
-        "z",
-        "z"
-      ]
-    },
-    {
-      "before": [
-        "C-u"
-      ],
-      "after": [
-        "C-u",
-        "z",
-        "z"
-      ]
-    }
-  ],
   "editor.inlineSuggest.enabled": true,
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   "jupyter.interactiveWindow.textEditor.autoMoveToNextCell": false,
@@ -187,4 +166,36 @@
     }
   },
   "diffEditor.ignoreTrimWhitespace": false,
+  "window.density.editorTabHeight": "compact",
+  "vscode-neovim.ctrlKeysForNormalMode": [
+    "a",
+    "c",
+    "d",
+    "e",
+    "f",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "o",
+    "r",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "/",
+    "]",
+    "right",
+    "left",
+    "up",
+    "down",
+    "backspace",
+    "delete"
+  ],
+  "debug.allowBreakpointsEverywhere": true,
+  "workbench.editor.showTabs": "single",
 }
