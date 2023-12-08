@@ -1,156 +1,81 @@
-// Place your key bindings in this file to override the defaults
 [
     {
-        "key": "ctrl+r",
-        "command": "python.execInTerminal"
+        "key": "tab",
+        "command": "-editor.emmet.action.expandAbbreviation",
+        "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
     },
     {
-        "key": "ctrl+-",
-        "command": "-workbench.action.zoomOut"
+        "key": "tab",
+        "command": "-insertSnippet",
+        "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
     },
     {
-        "key": "ctrl+-",
-        "command": "workbench.action.navigateBack",
-        "when": "canNavigateBack"
-    },
-    {
-        "key": "alt+left",
-        "command": "-workbench.action.navigateBack",
-        "when": "canNavigateBack"
-    },
-    {
-        "key": "alt+right",
-        "command": "-workbench.action.navigateForward",
-        "when": "canNavigateForward"
-    },
-    {
-        "key": "alt+right",
-        "command": "cursorWordEndRight",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "ctrl+right",
-        "command": "-cursorWordEndRight",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "alt+left",
-        "command": "cursorWordEndLeft"
-    },
-    {
-        "key": "ctrl+right",
-        "command": "cursorLineEnd"
-    },
-    {
-        "key": "ctrl+left",
-        "command": "cursorLineStart"
-    },
-    {
-        "key": "ctrl+shift+-",
-        "command": "-workbench.action.zoomOut"
-    },
-    {
-        "key": "ctrl+shift+-",
-        "command": "workbench.action.navigateForward"
-    },
-    {
-        "key": "ctrl+shift+right",
-        "command": "-cursorWordEndRightSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "shift+alt+right",
-        "command": "-editor.action.smartSelect.expand",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+right",
-        "command": "editor.action.smartSelect.expand"
-    },
-    {
-        "key": "shift+alt+right",
-        "command": "cursorWordEndRightSelect"
-    },
-    {
-        "key": "shift+alt+left",
-        "command": "-editor.action.smartSelect.shrink",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+left",
-        "command": "editor.action.smartSelect.shrink"
-    },
-    {
-        "key": "shift+alt+left",
-        "command": "cursorWordEndLeftSelect"
-    },
-    {
-        "key": "ctrl+backspace",
-        "command": "-deleteWordLeft",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+backspace",
-        "command": "deleteWordLeft"
-    },
-    {
-        "key": "ctrl+backspace",
-        "command": "editor.action.deleteLines",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+k",
-        "command": "-editor.action.deleteLines",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+alt+right",
-        "command": "workbench.action.nextEditorInGroup"
-    },
-    {
-        "key": "ctrl+k ctrl+pagedown",
-        "command": "-workbench.action.nextEditorInGroup"
-    },
-    {
-        "key": "ctrl+alt+left",
-        "command": "-workbench.action.moveEditorToPreviousGroup"
-    },
-    {
-        "key": "ctrl+alt+right",
-        "command": "-workbench.action.moveEditorToNextGroup"
-    },
-    {
-        "key": "ctrl+k ctrl+pageup",
-        "command": "-workbench.action.previousEditorInGroup"
-    },
-    {
-        "key": "ctrl+alt+left",
-        "command": "workbench.action.previousEditorInGroup"
-    },
-    {
-        "key": "shift+alt+down",
-        "command": "-extension.vim_cmd+alt+down",
-        "when": "editorTextFocus && vim.active && !inDebugRepl"
+        "key": "tab",
+        "command": "-jumpToNextSnippetPlaceholder",
+        "when": "editorTextFocus && hasNextTabstop && inSnippetMode"
     },
     {
         "key": "shift+enter",
         "command": "-jupyter.runcurrentcelladvance",
-        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused"
+        "when": "editorTextFocus && jupyter.featureenabled && jupyter.hascodecells && !editorHasSelection"
     },
     {
-        "key": "ctrl+t",
-        "command": "-extension.vim_ctrl+t",
-        "when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
+        "key": "shift+enter",
+        "command": "jupyter.runcell",
+        "when": "notebookCellListFocused"
     },
     {
-        "key": "ctrl+w",
-        "command": "-extension.vim_ctrl+w",
-        "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+        "key": "shift+enter",
+        "command": "jupyter.runcurrentcell",
+        "when": "editorTextFocus && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused"
     },
     {
-        "key": "ctrl+c",
-        "command": "extension.vim_ctrl+c",
-        "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
+        "key": "ctrl+enter",
+        "command": "-jupyter.runcurrentcell",
+        "when": "editorTextFocus && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused"
+    },
+    {
+        "key": "alt+enter",
+        "command": "extension.jumpy-word"
+    },
+    {
+        "key": "cmd+r",
+        "command": "python.execInTerminal"
+    },
+    {
+        "key": "cmd+down",
+        "command": "jupyter.gotoNextCellInFile"
+    },
+    {
+        "key": "cmd+up",
+        "command": "jupyter.gotoPrevCellInFile"
+    },
+    {
+        "key": "cmd+j",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "key": "cmd+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "python.createTerminal"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "workbench.action.closePanel"
     },
     {
         "key": "shift+enter",
@@ -164,47 +89,134 @@
     },
     {
         "key": "shift+enter",
-        "command": "notebook.cell.executeAndFocusContainer",
-        "when": "notebookCellListFocused || editorTextFocus && inputFocus && notebookEditorFocused"
+        "command": "notebook.cell.execute",
+        "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
     },
     {
         "key": "ctrl+enter",
-        "command": "-notebook.cell.executeAndFocusContainer",
-        "when": "notebookCellListFocused || editorTextFocus && inputFocus && notebookEditorFocused"
+        "command": "-notebook.cell.execute",
+        "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
     },
     {
-        "key": "alt+y",
-        "command": "editor.debug.action.selectionToRepl"
+        "key": "shift+enter",
+        "command": "interactive.execute",
+        "when": "resourceScheme == 'vscode-interactive'"
     },
     {
-        "key": "ctrl+t",
-        "command": "-vscode-neovim.send-cmdline",
-        "when": "neovim.mode == 'cmdline'"
+        "key": "ctrl+enter",
+        "command": "-interactive.execute",
+        "when": "resourceScheme == 'vscode-interactive'"
     },
     {
-        "key": "ctrl+t",
-        "command": "-vscode-neovim.send",
-        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+        "key": "cmd+e",
+        "command": "editor.action.addSelectionToPreviousFindMatch"
     },
     {
-        "key": "ctrl+t",
-        "command": "-vscode-neovim.send",
-        "when": "editorTextFocus && neovim.ctrlKeysInsert && neovim.mode == 'insert'"
+        "key": "ctrl+alt+left",
+        "command": "workbench.action.previousEditorInGroup"
     },
     {
-        "key": "ctrl+w",
-        "command": "-vscode-neovim.send-cmdline",
-        "when": "neovim.mode == 'cmdline'"
+        "key": "cmd+k alt+cmd+left",
+        "command": "-workbench.action.previousEditorInGroup"
     },
     {
-        "key": "ctrl+w",
-        "command": "-vscode-neovim.send",
-        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+        "key": "ctrl+alt+right",
+        "command": "workbench.action.nextEditorInGroup"
     },
     {
-        "key": "ctrl+w",
-        "command": "-vscode-neovim.send",
-        "when": "editorTextFocus && neovim.ctrlKeysInsert && neovim.mode == 'insert'"
+        "key": "cmd+k alt+cmd+right",
+        "command": "-workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+`",
+        "command": "terminal.focus"
+    },
+    {
+        "key": "ctrl+shift+`",
+        "command": "-workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "cmd+d",
+        "command": "-extension.vim_cmd+d",
+        "when": "editorTextFocus && vim.active && vim.use<D-d> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-extension.vim_ctrl+x",
+        "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
+    },
+    {
+        "key": "alt+1",
+        "command": "workbench.action.openEditorAtIndex1"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "-workbench.action.openEditorAtIndex1"
+    },
+    {
+        "key": "alt+2",
+        "command": "workbench.action.openEditorAtIndex2"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "-workbench.action.openEditorAtIndex2"
+    },
+    {
+        "key": "alt+3",
+        "command": "workbench.action.openEditorAtIndex3"
+    },
+    {
+        "key": "ctrl+3",
+        "command": "-workbench.action.openEditorAtIndex3"
+    },
+    {
+        "key": "alt+4",
+        "command": "workbench.action.openEditorAtIndex4"
+    },
+    {
+        "key": "ctrl+4",
+        "command": "-workbench.action.openEditorAtIndex4"
+    },
+    {
+        "key": "alt+5",
+        "command": "workbench.action.openEditorAtIndex5"
+    },
+    {
+        "key": "ctrl+5",
+        "command": "-workbench.action.openEditorAtIndex5"
+    },
+    {
+        "key": "alt+6",
+        "command": "workbench.action.openEditorAtIndex6"
+    },
+    {
+        "key": "ctrl+6",
+        "command": "-workbench.action.openEditorAtIndex6"
+    },
+    {
+        "key": "alt+7",
+        "command": "workbench.action.openEditorAtIndex7"
+    },
+    {
+        "key": "ctrl+7",
+        "command": "-workbench.action.openEditorAtIndex7"
+    },
+    {
+        "key": "alt+8",
+        "command": "workbench.action.openEditorAtIndex8"
+    },
+    {
+        "key": "ctrl+8",
+        "command": "-workbench.action.openEditorAtIndex8"
+    },
+    {
+        "key": "alt+9",
+        "command": "workbench.action.openEditorAtIndex9"
+    },
+    {
+        "key": "ctrl+9",
+        "command": "-workbench.action.openEditorAtIndex9"
     },
     {
         "key": "space /",
@@ -255,14 +267,30 @@
         "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
     },
     {
-        "key": "ctrl+i",
-        "command": "-inlineChat.start",
-        "when": "inlineChatHasProvider && !editorReadonly"
+        "key": "alt+y",
+        "command": "editor.debug.action.selectionToRepl"
     },
     {
         "key": "space e",
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-vscode-neovim.escape",
+        "when": "editorTextFocus && neovim.ctrlKeysInsert && neovim.mode == 'insert'"
+    },
+    {
+        "key": "cmd+e cmd+e",
+        "command": "-sqltools.executeQuery",
+        "when": "editorHasSelection && editorTextFocus && !config.sqltools.disableChordKeybindings"
+    },
+    {
+        "key": "alt+p",
+        "command": "workbench.action.showAllEditors"
+    },
+    {
+        "key": "alt+cmd+tab",
+        "command": "-workbench.action.showAllEditors"
     }
-    
 ]
