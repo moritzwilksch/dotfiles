@@ -292,5 +292,17 @@
     {
         "key": "alt+cmd+tab",
         "command": "-workbench.action.showAllEditors"
+    },
+    {  // windows
+        "key": "ctrl+k ctrl+right",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {  // windows
+        "key": "ctrl+k ctrl+left",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "workbench.action.terminal.runSelectedText"
     }
 ]
