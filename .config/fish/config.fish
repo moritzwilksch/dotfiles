@@ -11,8 +11,6 @@ end
 #      printf ' $ '
 # end
 
-# vim bindings!
-fish_vi_key_bindings
 
 # moritz functions
 alias mm='micromamba'
