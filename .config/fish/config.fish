@@ -2,15 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# function fish_prompt
-#      set_color brcyan
-#      printf %s $(prompt_pwd)
-#      set_color brmagenta
-#      printf (fish_git_prompt)
-#      set_color normal
-#      printf ' $ '
-# end
-
+# don't break neovim color theme inside tmux
+set -gx TERM xterm-256color
 
 # moritz functions
 alias mm='micromamba'
