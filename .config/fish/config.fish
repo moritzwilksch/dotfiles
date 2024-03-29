@@ -45,3 +45,5 @@ function sb
       --delimiter : \
       --preview 'bat --color=always {1} --highlight-line {2} --line-range {2}:' | cut -d ':' -f1-2 | xargs -I {} code -r -g {}
 end
+
+pixi completion --shell fish | source
