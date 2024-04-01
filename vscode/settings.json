@@ -197,4 +197,9 @@
   ],
   "debug.allowBreakpointsEverywhere": true,
   "workbench.editor.showTabs": "single",
+  "python.analysis.autoFormatStrings": true,
+  "accessibility.signals.sounds.volume": 0,
+  "python.terminal.activateEnvironment": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.showTabs": "none"
 }
