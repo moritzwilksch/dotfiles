@@ -28,15 +28,16 @@
   "terminal.integrated.fontSize": 14,
   "workbench.colorCustomizations": {
     "tab.activeBorderTop": "#0A84FF",
-    "editor.background": "#0a0c0e",
-    "terminal.background": "#0a0c0e",
+    "editor.background": "#050505",
+    "terminal.background": "#050505",
     "terminal.foreground": "#dadada",
-    "sideBar.background": "#0a0c0e",
-    "activityBar.background": "#0a0c0e",
-    "titleBar.activeBackground": "#0a0c0e",
-    "editorGroupHeader.tabsBackground": "#0a0c0e",
-    "statusBar.background": "#0a0c0e",
-    "tab.inactiveBackground": "#0a0c0e",
+    "sideBar.background": "#050505",
+    "activityBar.background": "#050505",
+    "titleBar.activeBackground": "#050505",
+    "editorGroupHeader.tabsBackground": "#050505",
+    "statusBar.background": "#050505",
+    "tab.inactiveBackground": "#050505",
+    "statusBar.noFolderBackground": "#050505",
     "tab.activeBackground": "#1b2025",
     "editorBracketHighlight.foreground1": "#e6ca2e",
     "editorBracketHighlight.foreground2": "#da70d6",
@@ -104,18 +105,17 @@
     "scminput": false,
     "yaml": true,
     "python": true,
-    "toml": false,
+    "toml": true,
     "rust": true
   },
   "debug.console.acceptSuggestionOnEnter": "on",
-  "python.formatting.provider": "black",
   "workbench.tree.indent": 14,
   "security.workspace.trust.untrustedFiles": "open",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "files.associations": {
     "*.py": "python"
   },
-  "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'JetBrainsMono NF', Menlo, Monaco, 'Courier New', monospace",
   "workbench.colorTheme": "One Dark Pro",
   "oneDarkPro.vivid": true,
   "oneDarkPro.bold": true,
@@ -123,7 +123,6 @@
   "editor.suggestSelection": "recentlyUsed",
   "notebook.output.textLineLimit": 50,
   "editor.minimap.enabled": false,
-  "audioCues.volume": 0,
   "editor.accessibilitySupport": "off",
   "git.ignoreRebaseWarning": true,
   "python.analysis.typeCheckingMode": "basic",
@@ -140,31 +139,15 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "remote.SSH.logLevel": "trace",
+  // "remote.SSH.logLevel": "trace",
   "ruff.importStrategy": "useBundled",
   "githubPullRequests.pullBranch": "never",
   "autoDocstring.docstringFormat": "numpy",
-  "jupyter.debugJustMyCode": false,
   "jupyter.runStartupCommands": [
     "%load_ext autoreload",
     "%autoreload 2"
   ],
   "editor.multiCursorModifier": "ctrlCmd",
-  "vscode-neovim.highlightGroups.highlights": {
-    
-    
-    "IncSearch": {
-      "backgroundColor": "theme.editor.findMatchBackground",
-      "borderColor": "theme.editor.findMatchBorder"
-    },
-    "Search": {
-      "backgroundColor": "theme.editor.findMatchHighlightBackground",
-      "borderColor": "theme.editor.findMatchHighlightBorder"
-    },
-    "Visual": {
-      "backgroundColor": "theme.editor.selectionBackground"
-    }
-  },
   "diffEditor.ignoreTrimWhitespace": false,
   "window.density.editorTabHeight": "compact",
   "vscode-neovim.ctrlKeysForNormalMode": [
@@ -180,6 +163,7 @@
     "l",
     "o",
     "r",
+    "t",
     "u",
     "v",
     "w",
@@ -200,6 +184,12 @@
   "python.analysis.autoFormatStrings": true,
   "accessibility.signals.sounds.volume": 0,
   "python.terminal.activateEnvironment": false,
+  "luahelper.format.column_limit": 140,
+  "luahelper.format.break_after_table_lb": true,
+  "luahelper.format.break_before_table_rb": true,
+  "luahelper.format.chop_down_table": true,
+  "luahelper.format.double_quote_to_single_quote": true,
   "zenMode.hideLineNumbers": false,
-  "zenMode.showTabs": "none"
+  "zenMode.showTabs": "none",
+  "workbench.sideBar.location": "right",
 }
