@@ -31,6 +31,7 @@
     "editor.background": "#050505",
     "terminal.background": "#050505",
     "terminal.foreground": "#dadada",
+    "editor.foreground": "#dadada",
     "sideBar.background": "#050505",
     "activityBar.background": "#050505",
     "titleBar.activeBackground": "#050505",
