@@ -29,9 +29,9 @@
   "workbench.colorCustomizations": {
     "tab.activeBorderTop": "#0A84FF",
     "editor.background": "#050505",
+    "editor.foreground": "#dadada",
     "terminal.background": "#050505",
     "terminal.foreground": "#dadada",
-    "editor.foreground": "#dadada",
     "sideBar.background": "#050505",
     "activityBar.background": "#050505",
     "titleBar.activeBackground": "#050505",
@@ -183,7 +183,6 @@
   "debug.allowBreakpointsEverywhere": true,
   "workbench.editor.showTabs": "single",
   "python.analysis.autoFormatStrings": true,
-  "accessibility.signals.sounds.volume": 0,
   "python.terminal.activateEnvironment": false,
   "luahelper.format.column_limit": 140,
   "luahelper.format.break_after_table_lb": true,
@@ -193,4 +192,11 @@
   "zenMode.hideLineNumbers": false,
   "zenMode.showTabs": "none",
   "workbench.sideBar.location": "right",
+  "accessibility.signalOptions": {
+    "volume": 0
+  },
+  "interactiveWindow.executeWithShiftEnter": true,
+  "ruff.nativeServer": true,
+  "editor.defaultFormatter": "charliermarsh.ruff",
+  "notebook.defaultFormatter": "charliermarsh.ruff",
 }
