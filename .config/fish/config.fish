@@ -47,3 +47,4 @@ function sb
 end
 
 pixi completion --shell fish | source
+fish_add_path /home/moritz/.pixi/bin
