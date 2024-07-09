@@ -45,7 +45,9 @@
     "editorBracketHighlight.foreground3": "#87cefa",
     "editorBracketHighlight.foreground4": "#f08080",
     "editorBracketHighlight.foreground5": "#00d18f",
-    "editorBracketHighlight.foreground6": "#abb2bf"
+    "editorBracketHighlight.foreground6": "#abb2bf",
+    "editorLineNumber.activeForeground": "#e6e6e6",
+    "editorLineNumber.foreground": "#abb2bf",
   },
   "editor.tokenColorCustomizations": {
     "strings": "#55d635",
