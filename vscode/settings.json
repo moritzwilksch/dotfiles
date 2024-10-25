@@ -48,6 +48,8 @@
     "editorBracketHighlight.foreground6": "#abb2bf",
     "editorLineNumber.activeForeground": "#e6e6e6",
     "editorLineNumber.foreground": "#abb2bf",
+    "editor.findMatchBackground": "#fff67150",
+    "editor.findMatchHighlightBorder": "#ffee00"
   },
   "editor.tokenColorCustomizations": {
     "strings": "#55d635",
