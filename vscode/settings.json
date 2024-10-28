@@ -195,7 +195,6 @@
   "luahelper.format.double_quote_to_single_quote": true,
   "zenMode.hideLineNumbers": false,
   "zenMode.showTabs": "none",
-  "workbench.sideBar.location": "right",
   "accessibility.signalOptions": {
     "volume": 0
   },
