@@ -324,5 +324,9 @@
     {
         "key": "ctrl+k ctrl+left",
         "command": "-workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "references-view.tree.focus"
     }
 ]
