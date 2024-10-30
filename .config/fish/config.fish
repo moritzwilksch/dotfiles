@@ -9,6 +9,7 @@ set -gx TERM xterm-256color
 alias mm='micromamba'
 alias ipy='ipython'
 alias ipyi='ipython -i'
+alias lg='lazygit'
 
 # search files
 function sf
