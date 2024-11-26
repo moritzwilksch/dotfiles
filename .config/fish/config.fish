@@ -17,6 +17,7 @@ alias ipy='ipython'
 alias ipyi='ipython -i'
 alias lg='lazygit'
 alias tvt='tv text'
+alias tvtc='code --goto (tv text)'
 
 # search files
 function sf
@@ -56,3 +57,10 @@ end
 
 pixi completion --shell fish | source
 fish_add_path -m /home/moritz/.pixi/bin
+
+# expose code ipc socket in tmux
+# see https://www.vinnie.work/blog/2024-06-29-controlling-vscode-from-tmux
+function reload_vscode_ipc
+    set -x VSCODE_IPC_HOOK_CLI (ls -tr /run/user/$(id -u)/vscode-ipc-* | tail -n 1)
+end
+reload_vscode_ipc
