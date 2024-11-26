@@ -1,0 +1,66 @@
+version = 1
+
+[envs.pyright]
+channels = ["conda-forge"]
+dependencies = { pyright = "*" }
+exposed = { pyright-python = "pyright-python", pyright-python-langserver = "pyright-python-langserver", pyright = "pyright", pyright-langserver = "pyright-langserver" }
+
+[envs.git-delta]
+channels = ["conda-forge"]
+dependencies = { git-delta = "*" }
+exposed = { delta = "delta" }
+
+[envs.bat]
+channels = ["conda-forge"]
+dependencies = { bat = "*" }
+exposed = { bat = "bat" }
+
+[envs.ruff]
+channels = ["conda-forge"]
+dependencies = { ruff = "*" }
+exposed = { ruff = "ruff" }
+
+[envs.lazygit]
+channels = ["conda-forge"]
+dependencies = { lazygit = "*" }
+exposed = { lazygit = "lazygit" }
+
+[envs.fd-find]
+channels = ["conda-forge"]
+dependencies = { fd-find = "*" }
+exposed = { fd = "fd" }
+
+[envs.gh]
+channels = ["conda-forge"]
+dependencies = { gh = "*" }
+exposed = { gh = "gh" }
+
+[envs.dprint]
+channels = ["conda-forge"]
+dependencies = { dprint = "*" }
+exposed = { dprint = "dprint" }
+
+[envs.dust]
+channels = ["conda-forge"]
+dependencies = { dust = "*" }
+exposed = { dust = "dust" }
+
+[envs.rattler-build]
+channels = ["conda-forge"]
+dependencies = { rattler-build = "*" }
+exposed = { rattler-build = "rattler-build" }
+
+[envs.ouch]
+channels = ["conda-forge"]
+dependencies = { ouch = "*" }
+exposed = { ouch = "ouch" }
+
+[envs.lazydocker]
+channels = ["conda-forge"]
+dependencies = { lazydocker = "*" }
+exposed = { lazydocker = "lazydocker" }
+
+[envs.television]
+channels = ["conda-forge"]
+dependencies = { television = "*" }
+exposed = { tv = "tv" }
