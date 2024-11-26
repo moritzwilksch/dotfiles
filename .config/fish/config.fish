@@ -17,7 +17,13 @@ alias ipy='ipython'
 alias ipyi='ipython -i'
 alias lg='lazygit'
 alias tvt='tv text'
-alias tvtc='code --goto (tv text)'
+
+function tvtc
+    set file_location (tv text)
+    if test -n "$file_location"
+        code --goto $file_location
+    end
+end
 
 # search files
 function sf
