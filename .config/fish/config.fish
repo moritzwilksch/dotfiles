@@ -2,14 +2,21 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# don't break neovim color theme inside tmux
-set -gx TERM xterm-256color
+# function fish_prompt
+#      set_color brcyan
+#      printf %s $(prompt_pwd)
+#      set_color brmagenta
+#      printf (fish_git_prompt)
+#      set_color normal
+#      printf ' $ '
+# end
 
 # moritz functions
 alias mm='micromamba'
 alias ipy='ipython'
 alias ipyi='ipython -i'
 alias lg='lazygit'
+alias tvt='tv text'
 
 # search files
 function sf
@@ -48,4 +55,4 @@ function sb
 end
 
 pixi completion --shell fish | source
-fish_add_path /home/moritz/.pixi/bin
+fish_add_path -m /home/moritz/.pixi/bin
