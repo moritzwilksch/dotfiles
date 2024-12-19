@@ -202,4 +202,21 @@
   "ruff.nativeServer": true,
   "editor.defaultFormatter": "charliermarsh.ruff",
   "notebook.defaultFormatter": "charliermarsh.ruff",
+  "vim.sneak": true,
+  "vim.easymotion": true,
+  "vim.leader": " ",
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.targets.enable": true,
+  "vim.commandLineModeKeyBindings": [
+
+  ],
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-p>": false
+  },
+  "vim.highlightedyank.enable": true,
+}
+
 }
