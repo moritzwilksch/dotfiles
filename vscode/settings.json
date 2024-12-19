@@ -214,7 +214,8 @@
     "<C-d>": true,
     "<C-s>": false,
     "<C-z>": false,
-    "<C-p>": false
+    "<C-p>": false,
+    "<C-b>": false,
   },
   "vim.highlightedyank.enable": true,
 }
