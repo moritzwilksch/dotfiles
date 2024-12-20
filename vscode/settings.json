@@ -218,4 +218,26 @@
     "<C-b>": false,
   },
   "vim.highlightedyank.enable": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<leader>",
+        "o"
+      ],
+      "after": [
+        "o",
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "O"
+      ],
+      "after": [
+        "O",
+        "<Esc>"
+      ]
+    }
+  ],
 }
