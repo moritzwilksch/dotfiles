@@ -1,0 +1,10 @@
+theme = niji
+cursor-style = block
+shell-integration = fish
+macos-titlebar-style = tabs
+window-padding-balance = true
+window-padding-x = 10
+window-padding-y = 10
+
+background = 050505
+cursor-color = dadada
