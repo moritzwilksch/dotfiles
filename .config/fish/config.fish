@@ -67,6 +67,14 @@ fish_add_path -m /home/moritz/.pixi/bin
 # expose code ipc socket in tmux
 # see https://www.vinnie.work/blog/2024-06-29-controlling-vscode-from-tmux
 function reload_vscode_ipc
-    set -x VSCODE_IPC_HOOK_CLI (ls -tr /run/user/$(id -u)/vscode-ipc-* | tail -n 1)
+    set user_ipc_path /run/user/(id -u)/vscode-ipc-*
+    # Check if the glob matches at least one file
+    if count $user_ipc_path > /dev/null
+        set -x VSCODE_IPC_HOOK_CLI (ls -tr $user_ipc_path | tail -n 1)
+    else
+        # If no match, clear the variable
+        set -e VSCODE_IPC_HOOK_CLI
+    end
 end
 reload_vscode_ipc
+
