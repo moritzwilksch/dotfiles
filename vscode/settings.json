@@ -218,6 +218,7 @@
     "<C-b>": false,
   },
   "vim.highlightedyank.enable": true,
+  "vim.easymotionMarkerForegroundColorOneChar": "#ff00e6",
   "vim.normalModeKeyBindings": [
     {
       "before": [
