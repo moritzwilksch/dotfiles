@@ -17,6 +17,7 @@ alias ipy='ipython'
 alias ipyi='ipython -i'
 alias lg='lazygit'
 alias tvt='tv text'
+alias cdtemp='cd $(mktemp -d)'
 
 function tvtc
     set file_location (tv text)
