@@ -79,3 +79,5 @@ function reload_vscode_ipc
 end
 reload_vscode_ipc
 
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/moritzwilksch/.cache/lm-studio/bin
