@@ -1,0 +1,1 @@
+Summarize the content I provide as brief bullet points. You might need to fetch content from the URL I provide. Highlight important points using **markdown**. If useful, use headings to structure the summary.
