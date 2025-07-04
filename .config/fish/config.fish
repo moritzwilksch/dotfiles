@@ -79,5 +79,24 @@ function reload_vscode_ipc
 end
 reload_vscode_ipc
 
+# nice comment headings
+function pad-header
+    set input $argv[1]
+    set total_width 100
+    set decorated "$input"
+
+    set decorated_length (string length -- $decorated)
+    set remaining (math $total_width - $decorated_length - 6)
+    set pad_left (math --scale=0 "$remaining / 2")
+    set pad_right (math $remaining - $pad_left)
+
+    set left (string repeat -n $pad_left -)
+    set right (string repeat -n $pad_right -)
+
+    echo "# $left $decorated $right #"
+end
+
+
+
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/moritzwilksch/.cache/lm-studio/bin
