@@ -1,0 +1,47 @@
+// Server-specific settings
+//
+// For a full list of overridable settings, and general information on settings,
+// see the documentation: https://zed.dev/docs/configuring-zed#settings-files
+{
+
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 100,
+          "showSyntaxErrors": true
+        }
+      }
+    },
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "off"
+        }
+      }
+    }
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff", "basedpyright"],
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
+  }
+
+    }
