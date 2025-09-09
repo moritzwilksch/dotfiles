@@ -1,0 +1,120 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  // "ssh_connections": [],
+  "edit_predictions": {
+    "copilot": {
+      // "proxy": "http://localhost:3128",
+      "proxy_no_verify": true,
+      "enterprise_uri": null
+    }
+  },
+  "inlay_hints": {
+    "enabled": false,
+    "show_value_hints": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "alt": false,
+      "shift": false,
+      "platform": false,
+      "function": false
+    }
+  },
+  "format_on_save": "off",
+  "buffer_font_features": {
+    "calt": 0
+  },
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  "terminal": {
+    "font_size": 12.0,
+    // "shell": {
+    //  "program": "C:\\..."
+    // }
+  },
+  "multi_cursor_modifier": "cmd_or_ctrl",
+  "relative_line_numbers": true,
+  "gutter": {
+    "line_numbers": true
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "hover_popover_delay": 150,
+  "base_keymap": "VSCode",
+  "proxy": "http://localhost:3128",
+  "tab_bar": {
+    "show": false
+  },
+  "autosave": "on_focus_change",
+  "agent": {
+    "button": true,
+    "enabled": true
+  },
+  "file_types": {
+    "python": ["*.py"]
+  },
+  "telemetry": {
+    "metrics": false
+  },
+  "vim_mode": true,
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 12,
+  "buffer_font_size": 12,
+  "upload_binary_over_ssh": true,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Warp One Dark"
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 100,
+          "showSyntaxErrors": true
+        }
+      }
+    },
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "off"
+        }
+      }
+    }
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff", "basedpyright"],
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
+  }
+}
