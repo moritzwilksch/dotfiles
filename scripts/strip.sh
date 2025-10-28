@@ -16,6 +16,9 @@ sed -e 's/ä/ae/g' \
     -e 's/ü/ue/g' \
     -e 's/Ä/Ae/g' \
     -e 's/Ö/Oe/g' \
+    -e 's/…/.../g' \
+    -e 's/—/-/g' \
+    -e 's/–/-/g' \
     -e 's/Ü/Ue/g' \
     -e 's/ß/ss/g' "$input_file" > "$tmp_file"
 
