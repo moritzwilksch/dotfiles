@@ -13,7 +13,6 @@ Passing "-" (or omitting arguments) makes the script use stdin/stdout.
 
 import re
 import sys
-import unicodedata
 from pathlib import Path
 from typing import TextIO
 
@@ -130,15 +129,7 @@ ZERO_WIDTH_CHARS = [
 
 
 def normalize_text(text: str) -> str:
-    """
-    Normalize Unicode text to plain ASCII.
-
-    Args:
-        text: Input text with potentially unusual Unicode characters
-
-    Returns:
-        Normalized ASCII text
-    """
+    """Normalize Unicode text to plain ASCII."""
     # Stage 1: Character replacements
     for old_char, new_char in CHAR_REPLACEMENTS.items():
         text = text.replace(old_char, new_char)
@@ -158,40 +149,29 @@ def normalize_text(text: str) -> str:
 
     for line in lines:
         # Preserve leading indentation (spaces and tabs)
-        leading_whitespace = re.match(r'^[ \t]*', line).group()
-        rest_of_line = line[len(leading_whitespace):]
+        leading_whitespace = re.match(r"^[ \t]*", line).group()
+        rest_of_line = line[len(leading_whitespace) :]
 
         # Collapse multiple spaces in the rest of the line (but keep single spaces)
-        rest_of_line = re.sub(r'[ \t]{2,}', ' ', rest_of_line)
+        rest_of_line = re.sub(r"[ \t]{2,}", " ", rest_of_line)
 
         # Remove spaces before punctuation
-        rest_of_line = re.sub(r' +([,:;.!?])', r'\1', rest_of_line)
+        rest_of_line = re.sub(r" +([,:;.!?])", r"\1", rest_of_line)
 
         # Remove trailing spaces but keep the newline
-        rest_of_line = rest_of_line.rstrip(' \t')
+        rest_of_line = rest_of_line.rstrip(" \t")
 
         normalized_lines.append(leading_whitespace + rest_of_line)
 
-    text = ''.join(normalized_lines)
+    text = "".join(normalized_lines)
 
     # Stage 3: Remove any remaining non-ASCII characters
     # Only strip characters we haven't explicitly mapped
-    text = text.encode("ascii", "ignore").decode("ascii")
-
-    return text
+    return text.encode("ascii", "ignore").decode("ascii")
 
 
 def process_stream(input_stream: TextIO, output_stream: TextIO) -> None:
-    """
-    Process text from input stream to output stream.
-
-    Args:
-        input_stream: Input text stream (e.g., sys.stdin or open file)
-        output_stream: Output text stream (e.g., sys.stdout or open file)
-    """
-    text = input_stream.read()
-    normalized = normalize_text(text)
-    output_stream.write(normalized)
+    output_stream.write(normalize_text(input_stream.read()))
 
 
 def main() -> int:
@@ -213,10 +193,7 @@ def main() -> int:
 
     try:
         # Handle input
-        if input_path == "-":
-            input_stream = sys.stdin
-        else:
-            input_stream = open(input_path, "r", encoding="utf-8")
+        input_stream = sys.stdin if input_path == "-" else open(input_path, "r", encoding="utf-8")
 
         try:
             # Handle output
