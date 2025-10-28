@@ -194,6 +194,18 @@ install_pixi() {
   curl -fsSL https://pixi.sh/install.sh | bash || warn "Pixi install failed."
   mkdir -p "$HOME/.config/fish"
   append_unique 'pixi completion --shell fish | source' "$HOME/.config/fish/config.fish"
+  # Ensure global manifest and update
+  mkdir -p "$HOME/.pixi/manifests"
+  if curl -fsSL -o "$HOME/.pixi/manifests/pixi-global.toml" \
+    https://raw.githubusercontent.com/moritzwilksch/dotfiles/main/.pixi/manifests/pixi-global.toml; then
+    if [ -x "$HOME/.pixi/bin/pixi" ]; then
+      "$HOME/.pixi/bin/pixi" global update || warn "pixi global update failed."
+    else
+      pixi global update || warn "pixi global update failed."
+    fi
+  else
+    warn "Failed to download pixi-global.toml."
+  fi
 }
 
 # Aliases (idempotent)
