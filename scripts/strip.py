@@ -138,7 +138,6 @@ def normalize_text(text: str) -> str:
 
     Returns:
         Normalized ASCII text
-
     """
     # Stage 1: Character replacements
     for old_char, new_char in CHAR_REPLACEMENTS.items():
@@ -152,15 +151,28 @@ def normalize_text(text: str) -> str:
     for zw_char in ZERO_WIDTH_CHARS:
         text = text.replace(zw_char, "")
 
-    # Stage 2: Whitespace normalization
-    # Collapse multiple spaces into one
-    text = re.sub(r"\s+", " ", text)
+    # Stage 2: Whitespace normalization (preserve newlines and normal indentation)
+    # Process line by line to preserve newlines
+    lines = text.splitlines(keepends=True)
+    normalized_lines = []
 
-    # Remove spaces before punctuation
-    text = re.sub(r" *([,:;.!?])", r"\1", text)
+    for line in lines:
+        # Preserve leading indentation (spaces and tabs)
+        leading_whitespace = re.match(r'^[ \t]*', line).group()
+        rest_of_line = line[len(leading_whitespace):]
 
-    # Strip leading/trailing spaces from each line
-    text = "\n".join(line.strip() for line in text.splitlines())
+        # Collapse multiple spaces in the rest of the line (but keep single spaces)
+        rest_of_line = re.sub(r'[ \t]{2,}', ' ', rest_of_line)
+
+        # Remove spaces before punctuation
+        rest_of_line = re.sub(r' +([,:;.!?])', r'\1', rest_of_line)
+
+        # Remove trailing spaces but keep the newline
+        rest_of_line = rest_of_line.rstrip(' \t')
+
+        normalized_lines.append(leading_whitespace + rest_of_line)
+
+    text = ''.join(normalized_lines)
 
     # Stage 3: Remove any remaining non-ASCII characters
     # Only strip characters we haven't explicitly mapped
