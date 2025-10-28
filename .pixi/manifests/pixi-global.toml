@@ -1,24 +1,9 @@
 version = 1
 
-[envs.pyright]
-channels = ["conda-forge"]
-dependencies = { pyright = "*" }
-exposed = { pyright-python = "pyright-python", pyright-python-langserver = "pyright-python-langserver", pyright = "pyright", pyright-langserver = "pyright-langserver" }
-
-[envs.git-delta]
-channels = ["conda-forge"]
-dependencies = { git-delta = "*" }
-exposed = { delta = "delta" }
-
 [envs.bat]
 channels = ["conda-forge"]
 dependencies = { bat = "*" }
 exposed = { bat = "bat" }
-
-[envs.ruff]
-channels = ["conda-forge"]
-dependencies = { ruff = "*" }
-exposed = { ruff = "ruff" }
 
 [envs.lazygit]
 channels = ["conda-forge"]
@@ -34,11 +19,6 @@ exposed = { fd = "fd" }
 channels = ["conda-forge"]
 dependencies = { gh = "*" }
 exposed = { gh = "gh" }
-
-[envs.dprint]
-channels = ["conda-forge"]
-dependencies = { dprint = "*" }
-exposed = { dprint = "dprint" }
 
 [envs.dust]
 channels = ["conda-forge"]
@@ -64,3 +44,18 @@ exposed = { lazydocker = "lazydocker" }
 channels = ["conda-forge"]
 dependencies = { television = "*" }
 exposed = { tv = "tv" }
+
+[envs.uv]
+channels = ["conda-forge"]
+dependencies = { uv = "*" }
+exposed = { uv = "uv", uvx = "uvx" }
+
+[envs.direnv]
+channels = ["conda-forge"]
+dependencies = { direnv = "*" }
+exposed = { direnv = "direnv" }
+
+[envs.tmux]
+channels = ["conda-forge"]
+dependencies = { tmux = "*" }
+exposed = { tmux = "tmux" }
