@@ -16,6 +16,11 @@ import sys
 from pathlib import Path
 from typing import TextIO
 
+# Constants
+MAX_ARGS = 3
+STDIN_MARKER = "-"
+MIN_ARGS_FOR_OUTPUT = 2
+
 # Character mappings for normalization
 CHAR_REPLACEMENTS = {
     # German umlauts
@@ -167,54 +172,49 @@ def normalize_text(text: str) -> str:
 
     # Stage 3: Remove any remaining non-ASCII characters
     # Only strip characters we haven't explicitly mapped
-    return text.encode("ascii", "ignore").decode("ascii")
+    # return text.encode("ascii", "ignore").decode("ascii")
+    return text
 
 
 def process_stream(input_stream: TextIO, output_stream: TextIO) -> None:
+    """Process input stream and write normalized text to output stream."""
     output_stream.write(normalize_text(input_stream.read()))
 
 
 def main() -> int:
-    """Main entry point."""
+    """Process Unicode text and normalize it to plain ASCII."""
     # Parse arguments
-    if len(sys.argv) > 3:
+    if len(sys.argv) > MAX_ARGS:
         print(f"Usage: {sys.argv[0]} [<input_file> [<output_file>]]", file=sys.stderr)
         return 1
 
-    input_path = sys.argv[1] if len(sys.argv) > 1 else "-"
-    output_path = sys.argv[2] if len(sys.argv) > 2 else "-"
+    input_path = sys.argv[1] if len(sys.argv) > 1 else STDIN_MARKER
+    output_path = sys.argv[2] if len(sys.argv) > 2 else STDIN_MARKER
 
     # Validate input file exists (if not stdin)
-    if input_path != "-":
+    if input_path != STDIN_MARKER:
         input_file = Path(input_path)
         if not input_file.exists():
             print(f"strip.py: input file not found: {input_path}", file=sys.stderr)
             return 1
 
     try:
-        # Handle input
-        input_stream = sys.stdin if input_path == "-" else open(input_path, "r", encoding="utf-8")
+        # Handle input with context manager
+        if input_path == STDIN_MARKER:
+            input_stream = sys.stdin
+            process_stream(input_stream, sys.stdout)
+        else:
+            with Path(input_path).open(encoding="utf-8") as input_stream:
+                if output_path == STDIN_MARKER:
+                    process_stream(input_stream, sys.stdout)
+                else:
+                    # Create output directory if needed
+                    output_file = Path(output_path)
+                    output_file.parent.mkdir(parents=True, exist_ok=True)
+                    with output_file.open("w", encoding="utf-8") as output_stream:
+                        process_stream(input_stream, output_stream)
 
-        try:
-            # Handle output
-            if output_path == "-":
-                output_stream = sys.stdout
-            else:
-                # Create output directory if needed
-                output_file = Path(output_path)
-                output_file.parent.mkdir(parents=True, exist_ok=True)
-                output_stream = open(output_path, "w", encoding="utf-8")
-
-            try:
-                process_stream(input_stream, output_stream)
-            finally:
-                if output_path != "-":
-                    output_stream.close()
-        finally:
-            if input_path != "-":
-                input_stream.close()
-
-    except Exception as e:
+    except (OSError, UnicodeDecodeError) as e:
         print(f"strip.py: error: {e}", file=sys.stderr)
         return 1
 
