@@ -13,8 +13,8 @@ end
 
 # moritz functions
 alias mm='micromamba'
-alias ipy='ipython'
-alias ipyi='ipython -i'
+alias ipy='ipython --no-confirm-exit --no-tip --quick --no-banner'
+alias ipyi='ipython -i --no-confirm-exit --no-tip --quick --no-banner'
 alias lg='lazygit'
 alias tvt='tv text'
 alias cdtemp='cd $(mktemp -d)'
