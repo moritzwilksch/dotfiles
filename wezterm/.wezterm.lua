@@ -42,5 +42,6 @@ config.colors = {
     '#ffffff', -- bright white
   },
 }
+config.scrollback_lines = 0
 
 return config
