@@ -1,5 +1,5 @@
 #!/bin/bash
-# packages: neovim fish ripgrep fzf font-jetbrains-mono-nerd-font tmux git htop wget curl make gcc
+# packages: neovim font-jetbrains-mono-nerd-font git htop wget curl make gcc
 {{ if eq .chezmoi.os "windows" -}}
 exit 0
 {{ end -}}
@@ -16,7 +16,7 @@ if ! command -v brew >/dev/null 2>&1; then
 fi
 
 log "Installing packages via Homebrew..."
-brew install neovim fish ripgrep fzf font-jetbrains-mono-nerd-font tmux || warn "Some brew packages may have failed"
+brew install neovim font-jetbrains-mono-nerd-font || warn "Some brew packages may have failed"
 
 {{ else -}}
 # Linux: detect package manager
@@ -71,20 +71,20 @@ esac
 # Enable EPEL on RPM distros
 case "$PKG_MGR" in
     dnf|yum)
-        pkg_install epel-release
-        command -v amazon-linux-extras >/dev/null 2>&1 && ($SUDO amazon-linux-extras enable epel 2>/dev/null || true)
+        if [ -f /etc/amazon-linux-release ]; then
+            # Amazon Linux 2023: EPEL not available, skip
+            true
+        elif [ -f /etc/system-release ] && grep -qi "Amazon Linux" /etc/system-release; then
+            # Amazon Linux 2: use amazon-linux-extras
+            command -v amazon-linux-extras >/dev/null 2>&1 && ($SUDO amazon-linux-extras enable epel 2>/dev/null || true)
+        else
+            pkg_install epel-release
+        fi
         ;;
 esac
 
-# Fish PPA on Debian/Ubuntu
-if [ "$PKG_MGR" = "apt" ]; then
-    ($SUDO apt-get install -y software-properties-common >/dev/null 2>&1 && \
-     $SUDO apt-add-repository -y ppa:fish-shell/release-3 >/dev/null 2>&1 && \
-     $SUDO apt-get update -y >/dev/null 2>&1) || warn "Fish PPA not added; using repo version."
-fi
-
 log "Installing base packages..."
-pkg_install git htop fish wget curl make tmux gcc ripgrep fzf
+pkg_install git htop wget curl make gcc
 
 # Neovim: try package manager first, fallback to tarball
 log "Installing Neovim..."
@@ -95,10 +95,10 @@ if ! command -v nvim >/dev/null 2>&1; then
     if [ "$ARCH" = "x86_64" ] || [ "$ARCH" = "amd64" ]; then
         TMP_DIR="$(mktemp -d)"
         log "Downloading Neovim x86_64 tarball..."
-        if curl -fsSL -o "$TMP_DIR/nvim-linux64.tar.gz" https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz; then
-            tar -xzf "$TMP_DIR/nvim-linux64.tar.gz" -C "$TMP_DIR"
+        if curl -fsSL -o "$TMP_DIR/nvim-linux-x86_64.tar.gz" https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz; then
+            tar -xzf "$TMP_DIR/nvim-linux-x86_64.tar.gz" -C "$TMP_DIR"
             $SUDO rm -rf /usr/local/nvim 2>/dev/null || true
-            $SUDO mv "$TMP_DIR/nvim-linux64" /usr/local/nvim
+            $SUDO mv "$TMP_DIR/nvim-linux-x86_64" /usr/local/nvim
             $SUDO ln -sf /usr/local/nvim/bin/nvim /usr/local/bin/nvim
             log "Neovim installed from tarball."
         else
