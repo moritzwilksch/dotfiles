@@ -16,7 +16,7 @@ if ! command -v brew >/dev/null 2>&1; then
 fi
 
 log "Installing packages via Homebrew..."
-brew install neovim fish ripgrep fzf font-jetbrains-mono-nerd-font tmux
+brew install neovim fish ripgrep fzf font-jetbrains-mono-nerd-font tmux || warn "Some brew packages may have failed"
 
 {{ else -}}
 # Linux: detect package manager
