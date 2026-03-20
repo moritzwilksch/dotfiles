@@ -1,0 +1,13 @@
+#!/bin/bash
+# hash: {{ include "dot_config/pixi/manifests/pixi-global.toml" | sha256sum }}
+{{ if eq .chezmoi.os "windows" -}}
+exit 0
+{{ end -}}
+
+if ! command -v pixi >/dev/null 2>&1; then
+    echo "pixi not found, skipping global sync"
+    exit 0
+fi
+
+echo "Running pixi global sync..."
+pixi global sync

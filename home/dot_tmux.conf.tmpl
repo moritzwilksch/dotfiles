@@ -29,8 +29,11 @@ set-option -g history-limit 65536
 set -sg escape-time 10
 
 # set fish shell
+{{ if eq .chezmoi.os "darwin" -}}
 set -g default-shell /opt/homebrew/bin/fish
-
+{{ else -}}
+set -g default-shell /usr/bin/fish
+{{ end }}
 # allow terminal scrolling
 # set-option -g terminal-overrides 'xterm*:smcup@:rmcup@'
 

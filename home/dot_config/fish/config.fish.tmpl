@@ -1,16 +1,11 @@
-export PATH="/opt/homebrew/bin/:$HOME/.pixi/bin/:$HOME/.cargo/bin:$PATH"
+{{ if eq .chezmoi.os "darwin" -}}
+export PATH="/opt/homebrew/bin/:/opt/homebrew/sbin/:$HOME/.pixi/bin/:$HOME/.cargo/bin:$PATH"
+{{ else -}}
+export PATH="$HOME/.pixi/bin/:$HOME/.cargo/bin:$PATH"
+{{ end -}}
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
-
-# function fish_prompt
-#      set_color brcyan
-#      printf %s $(prompt_pwd)
-#      set_color brmagenta
-#      printf (fish_git_prompt)
-#      set_color normal
-#      printf ' $ '
-# end
 
 # moritz functions
 alias mm='micromamba'
@@ -19,8 +14,9 @@ alias ipyi='ipython -i --no-confirm-exit --no-tip --quick --no-banner'
 alias lg='lazygit'
 alias tvt='tv text'
 alias cdtemp='cd $(mktemp -d)'
+{{ if eq .chezmoi.os "darwin" -}}
 alias claude-aws='qc-claude-login && claude'
-
+{{ end }}
 function tvtc
     set file_location (tv text)
     if test -n "$file_location"
@@ -97,13 +93,9 @@ function pad-header
     echo "# $left $decorated $right #"
 end
 
-
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/moritzwilksch/.cache/lm-studio/bin
-
 direnv hook fish | source
 
+{{ if eq .chezmoi.os "darwin" -}}
 # Added by OrbStack: command-line tools and integration
-# This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+{{ end -}}

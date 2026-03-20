@@ -1,0 +1,19 @@
+{{ if ne .chezmoi.os "darwin" }}
+Library/
+{{ end }}
+{{ if ne .chezmoi.os "linux" }}
+.config/Code/
+{{ end }}
+{{ if ne .chezmoi.os "windows" }}
+.wezterm.lua
+{{ end }}
+{{ if eq .chezmoi.os "windows" }}
+.tmux.conf
+.zshrc
+.config/fish/
+.config/ghostty/
+.config/pixi/
+run_onchange_install-packages.sh
+run_once_install-pixi.sh
+run_onchange_pixi-global-sync.sh
+{{ end }}
