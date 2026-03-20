@@ -1,3 +1,4 @@
+export PATH="/opt/homebrew/bin/:$HOME/.pixi/bin/:$HOME/.cargo/bin:$PATH"
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
@@ -18,6 +19,7 @@ alias ipyi='ipython -i --no-confirm-exit --no-tip --quick --no-banner'
 alias lg='lazygit'
 alias tvt='tv text'
 alias cdtemp='cd $(mktemp -d)'
+alias claude-aws='qc-claude-login && claude'
 
 function tvtc
     set file_location (tv text)
@@ -63,7 +65,6 @@ function sb
 end
 
 pixi completion --shell fish | source
-fish_add_path -m /home/moritz/.pixi/bin
 
 # expose code ipc socket in tmux
 # see https://www.vinnie.work/blog/2024-06-29-controlling-vscode-from-tmux
@@ -102,3 +103,7 @@ end
 set -gx PATH $PATH /Users/moritzwilksch/.cache/lm-studio/bin
 
 direnv hook fish | source
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
