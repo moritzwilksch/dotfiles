@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "AWS_CONFIG_FILE": "{{ .chezmoi.homeDir }}/.claude/aws.config",
+    "AWS_PROFILE": "moritz-personal",
+    "AWS_REGION": "eu-central-1"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": "Generated with [Claude Code](https://claude.com/claude-code)"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(gh pr view *)",
+      "Bash(gh pr list *)",
+      "Bash(gh pr diff *)",
+      "Bash(gh issue view *)",
+      "Bash(pixi run pre-commit *)",
+      "Bash(pixi run lefthook *)",
+      "Bash(pixi run test *)"
+    ],
+    "defaultMode": "acceptEdits"
+  },
+  "model": "eu.anthropic.claude-opus-4-6-v1",
+  "modelOverrides": {
+    "claude-opus-4-6": "eu.anthropic.claude-opus-4-6-v1"
+  },
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
+  "effortLevel": "medium"
+}
