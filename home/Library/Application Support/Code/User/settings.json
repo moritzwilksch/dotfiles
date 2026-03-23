@@ -145,7 +145,6 @@
     "asvetliakov.vscode-neovim": 1
   },
   // "remote.SSH.logLevel": "trace",
-  "ruff.importStrategy": "useBundled",
   "githubPullRequests.pullBranch": "never",
   "autoDocstring.docstringFormat": "numpy",
   "jupyter.runStartupCommands": [
@@ -195,9 +194,6 @@
   "luahelper.format.double_quote_to_single_quote": true,
   "zenMode.hideLineNumbers": false,
   "zenMode.showTabs": "none",
-  "accessibility.signalOptions": {
-    "volume": 0
-  },
   "interactiveWindow.executeWithShiftEnter": true,
   "ruff.nativeServer": true,
   "editor.defaultFormatter": "charliermarsh.ruff",
@@ -243,11 +239,22 @@
     {
       "before": [
         "g",
-        "t"
+        "y"
       ],
       "commands": [
-        "editor.action.peekTypeDefinition",
+        "editor.action.goToTypeDefinition",
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "A"
+      ],
+      "commands": [
+        "editor.action.goToReferences",
       ]
     }
   ],
+  "editor.inlayHints.enabled": "off",
+  "oneDarkPro.italic": false,
 }
