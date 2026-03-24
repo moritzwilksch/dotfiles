@@ -4,6 +4,8 @@
 exit 0
 {{ end -}}
 
+export PATH="$HOME/.pixi/bin:$PATH"
+
 if ! command -v pixi >/dev/null 2>&1; then
     echo "pixi not found, skipping global sync"
     exit 0
