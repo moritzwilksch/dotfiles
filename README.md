@@ -32,6 +32,35 @@ chezmoi apply
 
 Or edit directly in this repo and run `chezmoi apply`.
 
+## Re-run install scripts
+
+The normal path is to let chezmoi manage `run_onchange_*` scripts:
+
+```bash
+chezmoi apply
+```
+
+`run_onchange_*` scripts re-run when their rendered content changes. For
+`run_onchange_install-packages.sh.tmpl`, the `# packages:` comment at the top
+is part of the trigger, so update that comment when adding or removing
+packages.
+
+If you need to re-run the package install script without changing the repo, you
+can render and execute it manually:
+
+```bash
+chezmoi execute-template --file home/run_onchange_install-packages.sh.tmpl | bash
+```
+
+If you want to force chezmoi to consider only that script "not yet run", delete
+its current `scriptState` entry and then apply:
+
+```bash
+hash="$(chezmoi state get --bucket=entryState --key="$HOME/install-packages.sh" | jq -r '.contentsSHA256')"
+chezmoi state delete --bucket=scriptState --key="$hash"
+chezmoi apply
+```
+
 ## How it works
 
 - `home/` is the chezmoi source directory (set via `.chezmoiroot`)
