@@ -29,7 +29,8 @@
     "AWS_CONFIG_FILE": "{{ .chezmoi.homeDir }}/.claude/aws.config",
     "AWS_PROFILE": "moritz-personal",
     "AWS_REGION": "eu-central-1",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "eu.anthropic.claude-opus-4-6-v1[1m]"
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "eu.anthropic.claude-opus-4-6-v1[1m]",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "eu.anthropic.claude-sonnet-4-6[1m]"
   },
   "attribution": {
     "commit": "",
@@ -45,7 +46,9 @@
       "Bash(pixi run lefthook *)",
       "Bash(pixi run lefthook-run *)",
       "Bash(pixi run lint *)",
-      "Bash(pixi run test *)"
+      "Bash(pixi run test *)",
+      "Bash(pixi install *)",
+      "Bash(pixi lock *)"
     ],
     "defaultMode": "acceptEdits"
   },
@@ -60,7 +63,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "{{ .chezmoi.homeDir }}/.pixi/bin/qc-script-sound-microwave-ding"
+            "command": "{{ .chezmoi.homeDir }}/.claude/qc-script-claude-notification"
           }
         ]
       }
@@ -70,7 +73,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "{{ .chezmoi.homeDir }}/.pixi/bin/qc-script-sound-doorbell"
+            "command": "{{ .chezmoi.homeDir }}/.claude/qc-script-claude-notification"
           }
         ]
       }
