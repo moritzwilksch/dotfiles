@@ -4,7 +4,8 @@
     "CLAUDE_CODE_USE_BEDROCK": "1",
     "AWS_CONFIG_FILE": "{{ .chezmoi.homeDir }}/.claude/aws.config",
     "AWS_PROFILE": "moritz-personal",
-    "AWS_REGION": "eu-central-1"
+    "AWS_REGION": "eu-central-1",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "eu.anthropic.claude-opus-4-6-v1[1m]"
   },
   "attribution": {
     "commit": "",
@@ -18,13 +19,38 @@
       "Bash(gh issue view *)",
       "Bash(pixi run pre-commit *)",
       "Bash(pixi run lefthook *)",
+      "Bash(pixi run lefthook-run *)",
+      "Bash(pixi run lint *)",
       "Bash(pixi run test *)"
     ],
     "defaultMode": "acceptEdits"
   },
-  "model": "eu.anthropic.claude-opus-4-6-v1",
+  "model": "opus",
   "modelOverrides": {
     "claude-opus-4-6": "eu.anthropic.claude-opus-4-6-v1"
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "{{ .chezmoi.homeDir }}/.pixi/bin/qc-script-sound-microwave-ding"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "{{ .chezmoi.homeDir }}/.pixi/bin/qc-script-sound-doorbell"
+          }
+        ]
+      }
+    ]
   },
   "enabledPlugins": {
     "pyright-lsp@claude-plugins-official": true,
