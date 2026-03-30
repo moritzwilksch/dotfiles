@@ -257,4 +257,7 @@
   ],
   "editor.inlayHints.enabled": "off",
   "oneDarkPro.italic": false,
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "One Dark Pro",
+  "terminal.integrated.defaultProfile.osx": "fish",
 }
