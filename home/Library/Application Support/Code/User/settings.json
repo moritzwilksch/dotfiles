@@ -101,7 +101,6 @@
     "jupyter-notebook": "left"
   },
   "oneDarkPro.editorTheme": "One Dark Pro",
-  "workbench.preferredDarkColorTheme": "One Dark Pro",
   "git.confirmSync": false,
   "github.copilot.enable": {
     "*": true,
@@ -121,7 +120,6 @@
     "*.py": "python"
   },
   "editor.fontFamily": "'JetBrainsMono NF', Menlo, Monaco, 'Courier New', monospace",
-  "workbench.colorTheme": "One Dark Pro",
   "oneDarkPro.vivid": true,
   "oneDarkPro.bold": true,
   "autoDocstring.startOnNewLine": true,
@@ -257,7 +255,6 @@
   ],
   "editor.inlayHints.enabled": "off",
   "oneDarkPro.italic": false,
-  "window.autoDetectColorScheme": true,
-  "workbench.preferredLightColorTheme": "One Dark Pro",
+  "workbench.colorTheme": "One Dark Pro",
   "terminal.integrated.defaultProfile.osx": "fish",
 }
