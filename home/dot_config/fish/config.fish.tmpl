@@ -4,7 +4,11 @@ export PATH="$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.pixi/b
 export PATH="$HOME/.local/bin:$HOME/.pixi/bin:$HOME/.cargo/bin:$PATH"
 {{ end -}}
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    # force block cursor
+    set -g fish_cursor_default block
+    set -g fish_cursor_insert line
+    set -g fish_cursor_replace_one underscore
+    set -g fish_vi_force_cursor 1
 end
 
 # moritz functions
