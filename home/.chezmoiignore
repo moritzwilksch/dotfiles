@@ -4,6 +4,7 @@ Library/
 {{ if ne .chezmoi.os "linux" }}
 .config/Code/
 {{ end }}
+.config/nvim/lazy-lock.json
 {{ if ne .chezmoi.os "windows" }}
 .wezterm.lua
 {{ end }}
