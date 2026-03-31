@@ -18,6 +18,14 @@ fi
 log "Installing packages via Homebrew..."
 brew install neovim font-jetbrains-mono-nerd-font || warn "Some brew packages may have failed"
 
+# Clone nvim config
+mkdir -p "$HOME/.config"
+if [ -d "$HOME/.config/nvim/.git" ]; then
+    (cd "$HOME/.config/nvim" && git pull --ff-only >/dev/null 2>&1) || warn "Failed to update nvim config."
+else
+    (cd "$HOME/.config" && git clone https://github.com/moritzwilksch/nvim.git >/dev/null 2>&1) || warn "Failed to clone nvim config."
+fi
+
 {{ else -}}
 # Linux: detect package manager
 if command -v sudo >/dev/null 2>&1; then
