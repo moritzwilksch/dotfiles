@@ -1,5 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "awsAuthRefresh": "aws sso login",
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true,
@@ -32,6 +33,7 @@
   "env": {
     "CLAUDE_CODE_USE_BEDROCK": "1",
     "AWS_CONFIG_FILE": "{{ .chezmoi.homeDir }}/.claude/aws.config",
+    "AWS_ENDPOINT_URL": "",
     "AWS_PROFILE": "moritz-personal",
     "AWS_REGION": "eu-central-1",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "eu.anthropic.claude-opus-4-6-v1[1m]",
@@ -57,7 +59,7 @@
     ],
     "defaultMode": "acceptEdits"
   },
-  "model": "opus",
+  "model": "eu.anthropic.claude-opus-4-6-v1",
   "modelOverrides": {
     "claude-opus-4-6": "eu.anthropic.claude-opus-4-6-v1"
   },
