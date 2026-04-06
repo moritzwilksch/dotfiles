@@ -3,6 +3,7 @@ Library/
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
 .config/Code/
+.config/lazygit/
 {{ end }}
 .config/nvim/lazy-lock.json
 {{ if ne .chezmoi.os "windows" }}

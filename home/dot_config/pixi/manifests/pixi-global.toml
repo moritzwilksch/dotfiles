@@ -69,3 +69,8 @@ exposed = { direnv = "direnv" }
 channels = ["conda-forge"]
 dependencies = { tmux = "*" }
 exposed = { tmux = "tmux" }
+
+[envs.difftastic]
+channels = ["conda-forge"]
+dependencies = { difftastic = "*" }
+exposed = { difft = "difft" }
