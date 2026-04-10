@@ -2,7 +2,6 @@
   "ui_font_weight": 500.0,
   "file_finder": {
     "include_ignored": "smart",
-    "git_status": true,
   },
   "inlay_hints": {
     "show_value_hints": false,
@@ -16,25 +15,14 @@
   },
   "terminal": {
     "shell": {
-      "program": "/opt/homebrew/bin/fish"
+      "program": "/opt/homebrew/bin/fish",
     },
     "dock": "bottom",
     "button": true,
   },
   "show_signature_help_after_edits": true,
   "auto_signature_help": true,
-  "agent": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4.1",
-      "enable_thinking": false,
-    },
-    "inline_assistant_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5.2-codex",
-    },
-  },
-"languages": {
+  "languages": {
     "Python": {
       "language_servers": ["ty", "ruff"],
       "format_on_save": "off",
