@@ -13,6 +13,9 @@
   "sticky_scroll": {
     "enabled": true,
   },
+  "git_panel": {
+    "tree_view": true,
+  },
   "terminal": {
     "shell": {
       "program": "/opt/homebrew/bin/fish",
