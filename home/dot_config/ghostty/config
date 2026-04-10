@@ -1,7 +1,7 @@
 theme = niji
 cursor-style = block
 shell-integration = fish
-shell-integration-features = no-cursor
+shell-integration-features = no-cursor,ssh-terminfo
 macos-titlebar-style = tabs
 window-padding-balance = true
 window-padding-x = 10
