@@ -41,5 +41,8 @@
   "ui_font_size": 15.0,
   "autosave": "on_focus_change",
   "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "never",
+  },
   "relative_line_numbers": "enabled",
 }
