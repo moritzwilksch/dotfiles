@@ -1,4 +1,7 @@
 {
+  "tab_bar": {
+    "show": false
+  },
   "document_symbols": "on",
   "ui_font_weight": 500.0,
   "file_finder": {
