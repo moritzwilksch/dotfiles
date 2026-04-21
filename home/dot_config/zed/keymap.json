@@ -41,4 +41,9 @@
       "cmd-1": "workspace::FocusCenterPane",
     },
   },
+  {
+    "bindings": {
+      "alt-p": "tab_switcher::OpenInActivePane"
+    }
+  }
 ]
