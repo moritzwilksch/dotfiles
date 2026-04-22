@@ -1,4 +1,7 @@
 {
+  "title_bar": {
+    "show_branch_icon": true
+  },
   "tab_bar": {
     "show": false
   },
