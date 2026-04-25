@@ -32,7 +32,7 @@ set -sg escape-time 10
 {{ if eq .chezmoi.os "darwin" -}}
 set -g default-shell /opt/homebrew/bin/fish
 {{ else -}}
-set -g default-shell ~/.pixi/bin/fish
+set -g default-shell /usr/bin/fish
 {{ end }}
 # allow terminal scrolling
 # set-option -g terminal-overrides 'xterm*:smcup@:rmcup@'
