@@ -1,5 +1,15 @@
 version = 1
 
+[envs.chezmoi]
+channels = ["conda-forge"]
+dependencies = { chezmoi = "*" }
+exposed = { chezmoi = "chezmoi" }
+
+[envs.codex]
+channels = ["conda-forge"]
+dependencies = { codex = "*" }
+exposed = { codex = "codex" }
+
 [envs.bat]
 channels = ["conda-forge"]
 dependencies = { bat = "*" }
