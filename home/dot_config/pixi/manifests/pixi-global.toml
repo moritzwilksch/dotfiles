@@ -1,15 +1,5 @@
 version = 1
 
-[envs.chezmoi]
-channels = ["conda-forge"]
-dependencies = { chezmoi = "*" }
-exposed = { chezmoi = "chezmoi" }
-
-[envs.codex]
-channels = ["conda-forge"]
-dependencies = { codex = "*" }
-exposed = { codex = "codex" }
-
 [envs.bat]
 channels = ["conda-forge"]
 dependencies = { bat = "*" }
@@ -75,12 +65,41 @@ channels = ["conda-forge"]
 dependencies = { direnv = "*" }
 exposed = { direnv = "direnv" }
 
-[envs.tmux]
-channels = ["conda-forge"]
-dependencies = { tmux = "*" }
-exposed = { tmux = "tmux" }
-
 [envs.difftastic]
 channels = ["conda-forge"]
 dependencies = { difftastic = "*" }
 exposed = { difft = "difft" }
+
+[envs.codex]
+channels = ["conda-forge"]
+dependencies = { codex = "*" }
+exposed = { codex = "codex" }
+
+[envs.chezmoi]
+channels = ["conda-forge"]
+dependencies = { chezmoi = "*" }
+exposed = { chezmoi = "chezmoi" }
+
+[envs.pi-coding-agent]
+channels = ["conda-forge"]
+dependencies = { pi-coding-agent = "*" }
+exposed = { pi = "pi" }
+
+[envs.pixi-skills]
+channels = ["conda-forge"]
+dependencies = { pixi-skills = "*" }
+exposed = { pixi-skills = "pixi-skills" }
+
+[envs.agent-skill-conda-forge]
+channels = ["https://prefix.dev/skill-forge"]
+dependencies = { agent-skill-conda-forge = "*" }
+
+[envs.nvim]
+channels = ["conda-forge"]
+dependencies = { nvim = "*" }
+exposed = { nvim = "nvim" }
+
+[envs.btop]
+channels = ["conda-forge"]
+dependencies = { btop = "*" }
+exposed = { btop = "btop" }
