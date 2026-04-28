@@ -248,6 +248,26 @@
       "commands": [
         "editor.action.peekTypeDefinition",
       ]
+    },
+    {
+      "before": ["g", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["g", "S"],
+      "commands": ["workbench.action.showAllSymbols"]
+    },
+    {
+      "before": ["g", "y"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["g", "A"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["g", "/"],
+      "commands": ["workbench.action.findInFiles"]
     }
   ],
 }

@@ -101,6 +101,7 @@
     "jupyter-notebook": "left"
   },
   "oneDarkPro.editorTheme": "One Dark Pro",
+  "workbench.preferredDarkColorTheme": "One Dark Pro",
   "git.confirmSync": false,
   "github.copilot.enable": {
     "*": true,
@@ -120,6 +121,7 @@
     "*.py": "python"
   },
   "editor.fontFamily": "'JetBrainsMono NF', Menlo, Monaco, 'Courier New', monospace",
+  "workbench.colorTheme": "One Dark Pro",
   "oneDarkPro.vivid": true,
   "oneDarkPro.bold": true,
   "autoDocstring.startOnNewLine": true,
@@ -143,6 +145,7 @@
     "asvetliakov.vscode-neovim": 1
   },
   // "remote.SSH.logLevel": "trace",
+  "ruff.importStrategy": "useBundled",
   "githubPullRequests.pullBranch": "never",
   "autoDocstring.docstringFormat": "numpy",
   "jupyter.runStartupCommands": [
@@ -192,6 +195,9 @@
   "luahelper.format.double_quote_to_single_quote": true,
   "zenMode.hideLineNumbers": false,
   "zenMode.showTabs": "none",
+  "accessibility.signalOptions": {
+    "volume": 0
+  },
   "interactiveWindow.executeWithShiftEnter": true,
   "ruff.nativeServer": true,
   "editor.defaultFormatter": "charliermarsh.ruff",
@@ -237,24 +243,31 @@
     {
       "before": [
         "g",
-        "y"
+        "t"
       ],
       "commands": [
-        "editor.action.goToTypeDefinition",
+        "editor.action.peekTypeDefinition",
       ]
     },
     {
-      "before": [
-        "g",
-        "A"
-      ],
-      "commands": [
-        "editor.action.goToReferences",
-      ]
+      "before": ["g", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["g", "S"],
+      "commands": ["workbench.action.showAllSymbols"]
+    },
+    {
+      "before": ["g", "y"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["g", "A"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["g", "/"],
+      "commands": ["workbench.action.findInFiles"]
     }
   ],
-  "editor.inlayHints.enabled": "off",
-  "oneDarkPro.italic": false,
-  "workbench.colorTheme": "One Dark Pro",
-  "terminal.integrated.defaultProfile.osx": "fish",
 }
