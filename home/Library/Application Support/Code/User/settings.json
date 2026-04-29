@@ -132,6 +132,7 @@
   "git.ignoreRebaseWarning": true,
   "python.analysis.typeCheckingMode": "basic",
   "editor.inlineSuggest.enabled": true,
+  "editor.inlayHints.enabled": "off",
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   "jupyter.interactiveWindow.textEditor.autoMoveToNextCell": false,
   "jupyter.interactiveWindow.codeLens.commands": "jupyter.runcell,  jupyter.runallcellsabove, jupyter.debugcell, jupyter.runcellandallbelow",
