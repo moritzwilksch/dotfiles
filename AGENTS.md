@@ -35,6 +35,8 @@ VS Code settings live at different paths per OS. Both directories contain **iden
 - macOS: `home/Library/Application Support/Code/User/`
 - Linux: `home/dot_config/Code/User/`
 
+**ALWAYS** apply any edit (settings.json, keybindings.json, snippets, etc.) to **both** paths in the same change. Editing only one will silently leave the other OS out of sync.
+
 ## Run script triggers
 
 - `run_onchange_install-packages.sh.tmpl` — triggered by a `# packages: ...` comment at the top. **Update that comment** when adding/removing packages.

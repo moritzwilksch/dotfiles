@@ -335,33 +335,14 @@
         "when": "editorFocus && inlineChatHasEditsAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput && !inlineChatHasSession"
     },
     {
-        "key": "alt+i",
-        "command": "inlineChat.start",
-        "when": "editorFocus && inlineChatHasProvider && inlineChatPossible && !editorReadonly && !editorSimpleInput"
-    },
-    {
         "key": "ctrl+i",
         "command": "-inlineChat.start",
         "when": "editorFocus && inlineChatHasProvider && inlineChatPossible && !editorReadonly && !editorSimpleInput"
     },
     {
-        "key": "alt+i",
-        "command": "inlineChat2.start"
-    },
-    {
-        "key": "alt+i",
-        "command": "inlineChat.startWithCurrentLine",
-        "when": "inlineChatHasProvider && inlineChatShowingHint && !editorReadonly && !inlineChatVisible"
-    },
-    {
         "key": "ctrl+i",
         "command": "-inlineChat.startWithCurrentLine",
         "when": "inlineChatHasProvider && inlineChatShowingHint && !editorReadonly && !inlineChatVisible"
-    },
-    {
-        "key": "alt+i",
-        "command": "workbench.action.chat.startVoiceChat",
-        "when": "chatIsEnabled && hasSpeechProvider && inChatInput && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress || chatIsEnabled && hasSpeechProvider && inlineChatFocused && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress"
     },
     {
         "key": "ctrl+i",
@@ -372,6 +353,10 @@
         "key": "alt+i",
         "command": "inlineChat.start",
         "when": "inlineChatHasProvider && inlineChatPossible && !editorReadonly && !editorSimpleInput"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.showAllEditorsByMostRecentlyUsed"
     },
     {
         "key": "ctrl+k ctrl+c",
