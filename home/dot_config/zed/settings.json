@@ -67,7 +67,7 @@
   "ui_font_family": ".SystemUIFont",
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
   "buffer_font_size": 14.0,
-  "buffer_font_weight": 600.0,
+  "buffer_font_weight": 500.0,
   "ui_font_size": 15.0,
   "autosave": "on_focus_change",
   "vim_mode": true,
