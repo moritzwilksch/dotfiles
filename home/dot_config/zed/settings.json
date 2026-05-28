@@ -49,15 +49,24 @@
   "auto_signature_help": true,
   "languages": {
     "Python": {
-      "language_servers": ["ty", "ruff"],
+      "language_servers": ["pyrefly", "!ty", "ruff"],
       "format_on_save": "off",
+    },
+  },
+  "lsp": {
+    "pyrefly": {
+      "settings": {
+        "python": {
+          "pythonPath": ".pixi/envs/default/bin/python",
+        },
+      },
     },
   },
   "base_keymap": "VSCode",
   "theme": "Moritz One Dark",
   "ui_font_family": ".SystemUIFont",
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
-  "buffer_font_size": 13.0,
+  "buffer_font_size": 14.0,
   "buffer_font_weight": 600.0,
   "ui_font_size": 15.0,
   "autosave": "on_focus_change",

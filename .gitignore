@@ -1,2 +1,4 @@
 .DS_Store
 home/dot_config/nvim/lazy-lock.json
+*.env
+secrets.env
