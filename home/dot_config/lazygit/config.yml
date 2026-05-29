@@ -3,3 +3,11 @@
 git:
   pagers:
     - externalDiffCommand: difft --color=always
+
+customCommands:
+  - key: "<c-g>"
+    context: "files"
+    description: "Autogenerate commit message from staged diff (Gemini)"
+    command: '~/.config/lazygit/gen-commit-msg.py'
+    loadingText: "Generating commit message..."
+    output: terminal
