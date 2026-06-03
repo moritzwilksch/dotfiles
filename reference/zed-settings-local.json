@@ -90,10 +90,20 @@
         }
       }
     },
+    "pyrefly": {
+      "settings": {
+        "python": {
+          "pythonPath": ".pixi/envs/default/bin/python",
+        },
+        "pyrefly": {
+          "search_path": ["src", "packages"],
+        },
+      },
+    },
   },
    "languages": {
     "Python": {
-      "language_servers": ["ty", "ruff"],
+      "language_servers": ["pyrefly", "!ty", "ruff"],
       "format_on_save": "off",
     },
   },

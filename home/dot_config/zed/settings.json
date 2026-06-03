@@ -60,6 +60,9 @@
         "python": {
           "pythonPath": ".pixi/envs/default/bin/python",
         },
+        "pyrefly": {
+          "search_path": ["src", "packages"],
+        },
       },
     },
   },
