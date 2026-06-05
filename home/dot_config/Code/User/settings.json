@@ -120,7 +120,7 @@
   "files.associations": {
     "*.py": "python"
   },
-  "editor.fontFamily": "'JetBrainsMono NF', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'Berkeley Mono', 'JetBrainsMono NF', Menlo, Monaco, 'Courier New', monospace",
   "workbench.colorTheme": "One Dark Pro",
   "oneDarkPro.vivid": true,
   "oneDarkPro.bold": true,
@@ -149,10 +149,7 @@
   "ruff.importStrategy": "useBundled",
   "githubPullRequests.pullBranch": "never",
   "autoDocstring.docstringFormat": "numpy",
-  "jupyter.runStartupCommands": [
-    "%load_ext autoreload",
-    "%autoreload 2"
-  ],
+  "jupyter.runStartupCommands": ["%load_ext autoreload", "%autoreload 2"],
   "editor.multiCursorModifier": "ctrlCmd",
   "diffEditor.ignoreTrimWhitespace": false,
   "window.density.editorTabHeight": "compact",
@@ -208,47 +205,28 @@
   "vim.leader": " ",
   "vim.sneakUseIgnorecaseAndSmartcase": true,
   "vim.targets.enable": true,
-  "vim.commandLineModeKeyBindings": [
-
-  ],
+  "vim.commandLineModeKeyBindings": [],
   "vim.handleKeys": {
     "<C-d>": true,
     "<C-s>": false,
     "<C-z>": false,
     "<C-p>": false,
-    "<C-b>": false,
+    "<C-b>": false
   },
   "vim.highlightedyank.enable": true,
   "vim.easymotionMarkerForegroundColorOneChar": "#ff00e6",
   "vim.normalModeKeyBindings": [
     {
-      "before": [
-        "<leader>",
-        "o"
-      ],
-      "after": [
-        "o",
-        "<Esc>"
-      ]
+      "before": ["<leader>", "o"],
+      "after": ["o", "<Esc>"]
     },
     {
-      "before": [
-        "<leader>",
-        "O"
-      ],
-      "after": [
-        "O",
-        "<Esc>"
-      ]
+      "before": ["<leader>", "O"],
+      "after": ["O", "<Esc>"]
     },
     {
-      "before": [
-        "g",
-        "t"
-      ],
-      "commands": [
-        "editor.action.peekTypeDefinition",
-      ]
+      "before": ["g", "t"],
+      "commands": ["editor.action.peekTypeDefinition"]
     },
     {
       "before": ["g", "s"],
@@ -270,5 +248,5 @@
       "before": ["g", "/"],
       "commands": ["workbench.action.findInFiles"]
     }
-  ],
+  ]
 }

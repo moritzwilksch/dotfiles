@@ -1,23 +1,23 @@
 {
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "agent": {
     "dock": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "title_bar": {
-    "show_branch_status_icon": true
+    "show_branch_status_icon": true,
   },
   "tab_bar": {
-    "show": false
+    "show": false,
   },
   "document_symbols": "on",
   "ui_font_weight": 500.0,
@@ -69,7 +69,8 @@
   "base_keymap": "VSCode",
   "theme": "Moritz One Dark",
   "ui_font_family": ".SystemUIFont",
-  "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  // "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  "buffer_font_family": "Berkeley Mono",
   "buffer_font_size": 14.0,
   "buffer_font_weight": 300.0,
   "ui_font_size": 15.0,

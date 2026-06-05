@@ -39,9 +39,10 @@
   "buffer_font_features": {
     "calt": 0
   },
-  "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  // "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  "buffer_font_family": "Berkeley Mono",
   "terminal": {
-    "font_size": 12.0,
+    "font_size": 12.0
     // "shell": {
     //  "program": "C:\\..."
     // }
@@ -93,18 +94,18 @@
     "pyrefly": {
       "settings": {
         "python": {
-          "pythonPath": ".pixi/envs/default/bin/python",
+          "pythonPath": ".pixi/envs/default/bin/python"
         },
         "pyrefly": {
-          "search_path": ["src", "packages"],
-        },
-      },
-    },
+          "search_path": ["src", "packages"]
+        }
+      }
+    }
   },
-   "languages": {
+  "languages": {
     "Python": {
       "language_servers": ["pyrefly", "!ty", "ruff"],
-      "format_on_save": "off",
-    },
-  },
+      "format_on_save": "off"
+    }
+  }
 }
