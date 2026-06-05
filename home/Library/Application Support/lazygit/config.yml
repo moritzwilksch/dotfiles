@@ -8,6 +8,10 @@ customCommands:
   - key: "<c-g>"
     context: "files"
     description: "Autogenerate commit message from staged diff (Gemini)"
-    command: '~/Library/Application\ Support/lazygit/gen-commit-msg.py'
+    command: 'git commit -m {{.Form.Message | quote}}'
     loadingText: "Generating commit message..."
-    output: terminal
+    prompts:
+      - type: "input"
+        title: "Commit message:"
+        key: "Message"
+        initialValue: "{{ runCommand `sh -c '\"$HOME/Library/Application Support/lazygit/gen-commit-msg.py\"'` }}"

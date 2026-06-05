@@ -132,40 +132,10 @@ def main() -> int:
         print("Empty response from model.", file=sys.stderr)
         return 3
 
-    return confirm_and_commit(message)
-
-
-BOLD = "\033[1m"
-DIM = "\033[2m"
-CYAN = "\033[36m"
-GREEN = "\033[32m"
-RESET = "\033[0m"
-
-
-def confirm_and_commit(message: str) -> int:
-    sep = "─" * 60
-    print(f"\n{CYAN}{sep}{RESET}")
-    print(f"{BOLD}Generated commit message{RESET}")
-    print(f"{CYAN}{sep}{RESET}")
-    print(message)
-    print(f"{CYAN}{sep}{RESET}")
-    print(f"{DIM}[{RESET}{GREEN}y{RESET}{DIM}]es commit  [{RESET}e{DIM}]dit then commit  [{RESET}n{DIM}]o abort{RESET}")
-
-    while True:
-        try:
-            choice = input("> ").strip().lower()
-        except (EOFError, KeyboardInterrupt):
-            print("\naborted.")
-            return 130
-        if choice in ("y", ""):
-            subprocess.check_call(["git", "commit", "-m", message])
-            return 0
-        if choice == "e":
-            subprocess.check_call(["git", "commit", "-e", "-m", message])
-            return 0
-        if choice == "n":
-            print("aborted.")
-            return 1
+    # Emit a single line so lazygit's `runCommand` can use it as the
+    # initial value of the commit-message prompt (it rejects multi-line output).
+    print(message.splitlines()[0])
+    return 0
 
 
 if __name__ == "__main__":
