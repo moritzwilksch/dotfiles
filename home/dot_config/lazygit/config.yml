@@ -8,7 +8,10 @@ customCommands:
   - key: "<c-g>"
     context: "files"
     description: "Autogenerate commit message from staged diff (Gemini)"
-    command: 'git commit -m {{.Form.Message | quote}}'
+    # lazygit's `quote` escapes backticks POSIX-style (\`), but our login shell is
+    # fish, which keeps \` as a literal backslash+backtick. Strip the stray backslash
+    # so the committed message matches what's shown in the prompt.
+    command: 'git commit -m (string replace --all -- \\` \` {{.Form.Message | quote}})'
     loadingText: "Generating commit message..."
     prompts:
       - type: "input"
