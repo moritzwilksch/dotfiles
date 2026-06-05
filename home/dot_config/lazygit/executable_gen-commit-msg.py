@@ -57,12 +57,33 @@ LOCK_PATTERNS = [
     "*.min.css",
 ]
 
-SYSTEM_PROMPT = """You write concise, conventional git commit messages.
+SYSTEM_PROMPT = """
+# Task
+Write a single sentence commit message for the diff the user provides.
+
+# Guidelines
+- Follow conventional commits
+- When referencing file names or identifiers in code, put them in `backticks`
+- The message must use active language and start with a verb in present tense
+- do not use generic words like "code", use the domain language of the code instead
+- instead of "and" just use commas: "fix A, refactor B"
+- Be as specific as possible! E.g., Instead of "update filtering logic", say: "filter for historical flag"
+
+# Examples
+<good>
+- fix: make `MyReranker` agnostic to input order
+- feat: add `DenseRetriever` embedding search
+- chore: fix deprecation warning in `pydantic_ai.Model.call`
+</good>
+
+<bad>
+- remove unused dataframe library
+
+You write concise, conventional git commit messages.
 
 Rules:
 - Output ONLY the commit message. No code fences, no preamble, no trailing notes.
 - Subject line: imperative mood, lowercase, <=72 chars, no trailing period.
-- If the change is non-trivial, add a blank line and a short body (wrapped ~72 chars) explaining the *why*, not the *what*.
 - Prefer one logical message describing the whole staged change.
 
 Example:

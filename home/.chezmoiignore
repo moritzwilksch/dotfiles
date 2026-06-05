@@ -3,7 +3,6 @@ Library/
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
 .config/Code/
-.config/lazygit/
 {{ end }}
 .config/nvim/lazy-lock.json
 {{ if ne .chezmoi.os "windows" }}
@@ -15,6 +14,7 @@ Library/
 .config/fish/
 .config/ghostty/
 .config/pixi/
+.config/lazygit/
 run_onchange_install-packages.sh
 run_once_install-pixi.sh
 run_onchange_pixi-global-sync.sh
