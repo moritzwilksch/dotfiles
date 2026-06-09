@@ -9,3 +9,20 @@ window-padding-y = 10
 
 background = 050505
 cursor-color = dadada
+
+# tmux-style pane/window management
+keybind = ctrl+a>c=new_tab
+keybind = ctrl+a>n=next_tab
+keybind = ctrl+a>p=previous_tab
+keybind = ctrl+n=next_tab
+keybind = ctrl+p=previous_tab
+keybind = ctrl+a>h=goto_split:left
+keybind = ctrl+a>j=goto_split:down
+keybind = ctrl+a>k=goto_split:up
+keybind = ctrl+a>l=goto_split:right
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+l=goto_split:right
+keybind = ctrl+a>shift+quote=new_split:down
+keybind = ctrl+a>shift+5=new_split:right
