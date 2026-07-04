@@ -193,9 +193,6 @@
   "luahelper.format.double_quote_to_single_quote": true,
   "zenMode.hideLineNumbers": false,
   "zenMode.showTabs": "none",
-  "accessibility.signalOptions": {
-    "volume": 0
-  },
   "interactiveWindow.executeWithShiftEnter": true,
   "ruff.nativeServer": true,
   "editor.defaultFormatter": "charliermarsh.ruff",
@@ -248,5 +245,11 @@
       "before": ["g", "/"],
       "commands": ["workbench.action.findInFiles"]
     }
-  ]
+  ],
+  "python.languageServer": "Default",
+  "remote.SSH.remotePlatform": {
+    "asimov": "linux"
+  },
+  "extensions.ignoreRecommendations": true,
+  "oneDarkPro.italic": false
 }
