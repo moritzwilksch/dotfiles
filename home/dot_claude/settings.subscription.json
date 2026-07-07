@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "CLAUDE_CODE_USE_BEDROCK": "",
+    "AWS_CONFIG_FILE": "",
+    "AWS_ENDPOINT_URL": "",
+    "AWS_PROFILE": "",
+    "AWS_REGION": ""
+  },
+  "awsAuthRefresh": "",
+  "model": "claude-opus-4-8"
+}
