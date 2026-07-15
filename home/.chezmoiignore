@@ -9,6 +9,7 @@ Library/
 .wezterm.lua
 {{ end }}
 {{ if eq .chezmoi.os "windows" }}
+.codex/
 .tmux.conf
 .zshrc
 .config/fish/

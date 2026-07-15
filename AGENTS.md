@@ -75,3 +75,5 @@ hash="$(chezmoi state get --bucket=entryState --key="$HOME/install-packages.sh" 
 chezmoi state delete --bucket=scriptState --key="$hash"
 chezmoi apply
 ```
+
+## Imported Claude Cowork project instructions

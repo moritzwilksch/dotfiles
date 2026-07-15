@@ -1,0 +1,64 @@
+model = "gpt-5.6-sol"
+model_reasoning_effort = "medium"
+model_verbosity = "low"
+service_tier = "default"
+personality = "pragmatic"
+
+# Mirror Claude Code's sandboxed auto-approval behavior.
+sandbox_mode = "workspace-write"
+approval_policy = "on-request"
+
+{{- if eq .chezmoi.os "darwin" }}
+notify = ["{{ .chezmoi.homeDir }}/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+{{- end }}
+
+[sandbox_workspace_write]
+network_access = true
+{{- if eq .chezmoi.os "darwin" }}
+writable_roots = ["/tmp/claude", "~/.cache", "~/Library/Caches/"]
+{{- else }}
+writable_roots = ["/tmp/claude", "~/.cache"]
+{{- end }}
+
+# Trust projects below the home directory without recording machine-local paths.
+[projects."{{ .chezmoi.homeDir }}"]
+trust_level = "trusted"
+
+{{- if eq .chezmoi.os "darwin" }}
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."sites@openai-bundled"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."computer-use@openai-bundled"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."chrome@openai-bundled"]
+enabled = true
+
+[desktop]
+ambient-suggestions-enabled = false
+conversationDetailMode = "STEPS_COMMANDS"
+default-service-tier = "priority"
+followUpQueueMode = "queue"
+dock-icon-preference = "codex-system"
+{{- end }}
