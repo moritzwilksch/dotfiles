@@ -1,35 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "awsAuthRefresh": "aws sso login",
-  "sandbox": {
-    "enabled": true,
-    "autoAllowBashIfSandboxed": true,
-    "allowUnsandboxedCommands": false,
-    "enableWeakerNetworkIsolation": true,
-    "excludedCommands": [
-      "pixi lock",
-      "pixi install"
-    ],
-    "filesystem": {
-      "allowWrite": [
-        "//tmp/claude",
-        "~/.cache",
-        "~/Library/Caches/"
-      ]
-    },
-    "network": {
-      "allowLocalBinding": true,
-      "allowedDomains": [
-        "github.com",
-        "api.github.com",
-        "raw.githubusercontent.com",
-        "pypi.org",
-        "files.pythonhosted.org",
-        "conda.anaconda.org",
-        "jfrog.io"
-      ]
-    }
-  },
   "env": {
     "CLAUDE_CODE_USE_BEDROCK": "1",
     "AWS_CONFIG_FILE": "{{ .chezmoi.homeDir }}/.claude/aws.config",
@@ -39,25 +10,26 @@
   },
   "attribution": {
     "commit": "",
-    "pr": "Generated with [Claude Code](https://claude.com/claude-code)"
+    "pr": ""
   },
   "permissions": {
-    "allow": [
-      "Bash(gh pr view *)",
-      "Bash(git *)",
-      "Bash(gh pr list *)",
-      "Bash(gh pr diff *)",
-      "Bash(gh issue view *)",
-      "Bash(pixi run pre-commit *)",
-      "Bash(pixi run lefthook *)",
-      "Bash(pixi run lefthook-run *)",
-      "Bash(pixi run lint *)",
-      "Bash(pixi run test *)",
-      "Bash(pixi install *)",
-      "Bash(pixi lock *)",
-      "WebFetch"
-    ],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "auto",
+    "ask": [
+      "Bash(git push*)",
+      "Read(**/*.env)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(~/.aws/**)",
+      "Read(**/.aws/**)",
+      "Read(~/.claude/aws.config)",
+      "Read(~/.git-credentials)",
+      "Read(**/.git-credentials)",
+      "Read(**/credentials)",
+      "Read(**/.netrc)",
+      "Read(~/.ssh/**)",
+      "Read(**/id_rsa)",
+      "Read(**/id_ed25519)"
+    ]
   },
   "model": "claude-fable-5[1m]",
   "hooks": {
@@ -85,5 +57,6 @@
   },
   "extraKnownMarketplaces": {},
   "effortLevel": "medium",
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "tui": "fullscreen"
 }
