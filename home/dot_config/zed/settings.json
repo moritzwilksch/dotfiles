@@ -1,4 +1,6 @@
 {
+  "excerpt_context_lines": 5,
+  "expand_excerpt_lines": 5,
   "project_panel": {
     "dock": "left",
   },
