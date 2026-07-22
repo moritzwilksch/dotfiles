@@ -55,7 +55,7 @@
         "editor.foreground": "#dadada",
         "editor.background": "#050505",
         "editor.gutter.background": "#050505",
-        "editor.subheader.background": null,
+        "editor.subheader.background": "#3e4452",
         "editor.active_line.background": "#252830",
         "editor.highlighted_line.background": null,
         "editor.line_number": "#495162",
@@ -291,7 +291,7 @@
         "warning.foreground": "#dadada",
         "error.foreground": "#dadada",
         "title_bar.foreground": "#dadada",
-        "background.appearance": "blurred"
+        "background.appearance": "opaque"
       }
     }
   ]
