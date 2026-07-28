@@ -34,7 +34,7 @@ def load_secrets(path: pathlib.Path) -> None:
         if key and key not in os.environ:
             os.environ[key] = value
 
-MODEL = "gemini-3.1-flash-lite"
+MODEL = "gemini-3.5-flash-lite"
 MAX_DIFF_LINES = 1000
 LOCK_PATTERNS = [
     "*.lock",
