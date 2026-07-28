@@ -72,6 +72,17 @@ copy_mode = "prefix+["
 toggle_sidebar = "prefix+b"
 help = "prefix+?"
 
+# --- navigate mode (local keys, active only while navigate mode is open) ---
+# vim motion on the workspace list, matching mode-keys vi.
+navigate_workspace_up = "k"
+navigate_workspace_down = "j"
+# j/k are herdr's defaults for pane vertical motion in this same mode, so pane
+# up/down moves to the arrows to keep the binding unambiguous. h/l stay as-is.
+navigate_pane_up = "up"
+navigate_pane_down = "down"
+navigate_pane_left = "h"
+navigate_pane_right = "l"
+
 [ui]
 # tmux: set -g mouse on
 mouse_capture = true
