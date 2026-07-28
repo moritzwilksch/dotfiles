@@ -1,0 +1,79 @@
+# herdr configuration
+# Docs: https://herdr.dev/docs/configuration/
+# Keybindings are ported from ~/.tmux.conf where herdr has an equivalent action.
+
+[terminal]
+{{ if eq .chezmoi.os "darwin" -}}
+default_shell = "/opt/homebrew/bin/fish"
+{{ else -}}
+default_shell = "/usr/bin/fish"
+{{ end -}}
+# tmux inherited the pane cwd on split/new-window.
+new_cwd = "follow"
+
+[advanced]
+# tmux: set-option -g history-limit 65536
+scrollback_limit_bytes = 16777216
+
+[keys]
+# tmux: unbind C-b / set-option -g prefix C-a
+prefix = "ctrl+a"
+
+# --- tabs (tmux windows) ---
+# tmux: bind-key c new-window
+new_tab = "prefix+c"
+# tmux: bind -n C-n next-window / bind -n C-p previous-window (no prefix, "fast" switch)
+next_tab = "ctrl+n"
+previous_tab = "ctrl+p"
+# tmux: prefix+1..9 select-window
+switch_tab = "prefix+1..9"
+rename_tab = "prefix+shift+t"
+close_tab = "prefix+shift+x"
+
+# --- workspaces (closest analog to tmux sessions) ---
+# tmux: bind-key s choose-tree (session switcher)
+workspace_picker = "prefix+s"
+# moved off prefix+s, which herdr binds to settings by default
+settings = "prefix+shift+s"
+new_workspace = "prefix+shift+n"
+rename_workspace = "prefix+shift+w"
+close_workspace = "prefix+shift+d"
+
+# --- panes ---
+# tmux: bind -n C-h/C-j/C-k/C-l select-pane -L/-D/-U/-R
+# NOTE: tmux only forwarded these to vim via a run-shell guard; herdr has no
+# conditional passthrough, so these are swallowed before reaching pane apps.
+focus_pane_left = "ctrl+h"
+focus_pane_down = "ctrl+j"
+focus_pane_up = "ctrl+k"
+focus_pane_right = "ctrl+l"
+# tmux: prefix+% split-window -h (pane to the right)
+split_vertical = "prefix+%"
+# tmux: prefix+" split-window -v (pane below)
+split_horizontal = "prefix+\""
+# tmux: prefix+x kill-pane, prefix+z resize-pane -Z
+close_pane = "prefix+x"
+zoom = "prefix+z"
+# tmux: bind-key r command-prompt -I "resize-pane -x "
+resize_mode = "prefix+r"
+# tmux: prefix+; last-pane
+last_pane = "prefix+;"
+cycle_pane_next = "prefix+tab"
+cycle_pane_previous = "prefix+shift+tab"
+rename_pane = "prefix+shift+p"
+
+# --- misc ---
+# tmux: prefix+d detach-client
+detach = "prefix+d"
+# tmux: bind-key R source-file ~/.tmux.conf
+reload_config = "prefix+shift+r"
+# tmux: prefix+[ copy-mode (set-window-option -g mode-keys vi)
+copy_mode = "prefix+["
+toggle_sidebar = "prefix+b"
+help = "prefix+?"
+
+[ui]
+# tmux: set -g mouse on
+mouse_capture = true
+# tmux's new-window did not prompt for a name.
+prompt_new_tab_name = false
