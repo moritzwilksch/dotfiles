@@ -3,6 +3,8 @@
 Chezmoi-managed dotfiles. Public repo — no secrets/employer info.
 For chezmoi concepts (naming conventions, templates, run scripts), see https://www.chezmoi.io/reference/.
 
+To import config edited directly in `~/`, use the `import-live-config` skill.
+
 ## Platforms
 
 - **macOS** (primary) — Homebrew, fish, Ghostty, VS Code, Claude Code
