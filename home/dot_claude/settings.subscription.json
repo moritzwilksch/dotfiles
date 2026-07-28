@@ -7,6 +7,21 @@
     "AWS_PROFILE": "",
     "AWS_REGION": ""
   },
+  "permissions": {
+	"allow": [
+		"Bash(git add:*)"
+	],
+	"ask": [
+		"Bash(gh pr create:*)",
+		"Bash(git commit:*)"
+	],
+	"deny": [
+		"Read(*.env)",
+		"Bash(rm:*)",
+		"Bash(curl:*)"
+	],
+	"defaultMode": "auto"
+  },
   "awsAuthRefresh": "",
-  "model": "claude-opus-4-8"
+  "model": "opus[1m]"
 }
