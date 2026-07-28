@@ -5,6 +5,8 @@ Library/
 .config/Code/
 {{ end }}
 .config/nvim/lazy-lock.json
+**/AGENTS.md
+AGENTS.md
 {{ if ne .chezmoi.os "windows" }}
 .wezterm.lua
 {{ end }}

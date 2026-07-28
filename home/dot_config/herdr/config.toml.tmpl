@@ -62,6 +62,13 @@ cycle_pane_next = "prefix+tab"
 cycle_pane_previous = "prefix+shift+tab"
 rename_pane = "prefix+shift+p"
 
+# --- agents ---
+# herdr has no agent navigate surface (navigate mode only targets workspaces
+# and panes), so agent nav is prefix-driven cycling rather than a picker + j/k.
+# prefix+j/k step down/up through the agents shown in the agent panel.
+next_agent = "prefix+j"
+previous_agent = "prefix+k"
+
 # --- misc ---
 # tmux: prefix+d detach-client
 detach = "prefix+d"
@@ -88,3 +95,5 @@ navigate_pane_right = "l"
 mouse_capture = true
 # tmux's new-window did not prompt for a name.
 prompt_new_tab_name = false
+agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = false
