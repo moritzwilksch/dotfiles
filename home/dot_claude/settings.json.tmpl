@@ -13,7 +13,6 @@
     "pr": ""
   },
   "permissions": {
-    "defaultMode": "auto",
     "ask": [
       "Bash(git push*)",
       "Read(**/*.env)",
@@ -29,7 +28,8 @@
       "Read(~/.ssh/**)",
       "Read(**/id_rsa)",
       "Read(**/id_ed25519)"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "model": "opus[1m]",
   "hooks": {
@@ -57,6 +57,6 @@
   },
   "extraKnownMarketplaces": {},
   "effortLevel": "medium",
-  "skipDangerousModePermissionPrompt": true,
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true
 }
