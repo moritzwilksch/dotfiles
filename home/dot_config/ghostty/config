@@ -1,6 +1,9 @@
 theme = niji
 font-family = Berkeley Mono
 cursor-style = block
+# Launch fish directly. `shell-integration` only configures Ghostty features;
+# it does not choose the shell process.
+command = /opt/homebrew/bin/fish
 shell-integration = fish
 shell-integration-features = no-cursor,ssh-terminfo
 macos-titlebar-style = tabs
