@@ -1,4 +1,5 @@
 theme = niji
+font-family = Berkeley Mono
 cursor-style = block
 shell-integration = fish
 shell-integration-features = no-cursor,ssh-terminfo
