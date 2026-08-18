@@ -18,6 +18,8 @@ alias ipyi='ipython -i --no-confirm-exit --no-tip --quick --no-banner'
 alias lg='lazygit'
 alias tvt='tv text'
 alias cdtemp='cd $(mktemp -d)'
+alias dw='difit --context 10 working'
+alias db='difit --merge-base --include-untracked --context 10 . origin/main'
 {{ if eq .chezmoi.os "darwin" -}}
 alias claude-aws='qc-claude-login && claude'
 {{ end }}

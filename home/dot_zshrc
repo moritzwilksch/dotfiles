@@ -1,6 +1,8 @@
 alias mm=micromamba
 alias ipy='ipython'
 alias ipyi='ipython -i'
+alias dw='difit --context 10 working'
+alias db='difit --merge-base --include-untracked --context 10 . origin/main'
 
 # search file by name, open in vscode
 function sf() {
