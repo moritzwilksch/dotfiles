@@ -47,25 +47,25 @@
     }
   },
   {
-    "context": "Pane",
+    "context": "VimControl && !menu",
     "bindings": {
       "n": "search::SelectNextMatch"
     }
   },
   {
-    "context": "Pane",
+    "context": "VimControl && !menu",
     "unbind": {
       "cmd-g": "search::SelectNextMatch"
     }
   },
   {
-    "context": "Pane",
+    "context": "VimControl && !menu",
     "bindings": {
       "shift-n": "search::SelectPreviousMatch"
     }
   },
   {
-    "context": "Pane",
+    "context": "VimControl && !menu",
     "unbind": {
       "cmd-shift-g": "search::SelectPreviousMatch"
     }
