@@ -47,27 +47,10 @@
     }
   },
   {
-    "context": "VimControl && !menu",
+    "context": "VimControl && !menu && multibuffer",
     "bindings": {
-      "n": "search::SelectNextMatch"
-    }
-  },
-  {
-    "context": "VimControl && !menu",
-    "unbind": {
-      "cmd-g": "search::SelectNextMatch"
-    }
-  },
-  {
-    "context": "VimControl && !menu",
-    "bindings": {
-      "shift-n": "search::SelectPreviousMatch"
-    }
-  },
-  {
-    "context": "VimControl && !menu",
-    "unbind": {
-      "cmd-shift-g": "search::SelectPreviousMatch"
+      "n": ["editor::SelectNext", { "replace_newest": true }],
+      "shift-n": ["editor::SelectPrevious", { "replace_newest": true }]
     }
   }
 ]
