@@ -1,0 +1,10 @@
+{
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-sol",
+  "packages": [
+    "npm:@tintinweb/pi-subagents"
+  ],
+  "defaultThinkingLevel": "medium",
+  "theme": "dark",
+  "showCacheMissNotices": true
+}
