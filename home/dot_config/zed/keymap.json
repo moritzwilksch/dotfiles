@@ -45,5 +45,29 @@
     "bindings": {
       "alt-p": "tab_switcher::OpenInActivePane"
     }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "n": "search::SelectNextMatch"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "cmd-g": "search::SelectNextMatch"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "shift-n": "search::SelectPreviousMatch"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "cmd-shift-g": "search::SelectPreviousMatch"
+    }
   }
 ]
