@@ -49,8 +49,8 @@
   {
     "context": "VimControl && !menu && multibuffer",
     "bindings": {
-      "n": ["editor::SelectNext", { "replace_newest": true }],
-      "shift-n": ["editor::SelectPrevious", { "replace_newest": true }]
+      "n": "editor::GoToNextReference",
+      "shift-n": "editor::GoToPreviousReference"
     }
   }
 ]
