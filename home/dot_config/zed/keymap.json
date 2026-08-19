@@ -52,5 +52,12 @@
       "n": "editor::GoToNextReference",
       "shift-n": "editor::GoToPreviousReference"
     }
+  },
+  {
+    "context": "ProjectSearchView > Editor && VimControl && !menu",
+    "bindings": {
+      "n": "search::SelectNextMatch",
+      "shift-n": "search::SelectPreviousMatch"
+    }
   }
 ]
