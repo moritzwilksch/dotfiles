@@ -24,6 +24,13 @@ To import config edited directly in `~/`, use the `import-live-config` skill.
 - `.chezmoiroot` is set to `home` — the chezmoi source dir is `home/`, not the repo root
 - `reference/` contains Zed editor configs that are **not deployed** (manual copy only)
 
+## Global agent instructions
+
+Keep these three files identical whenever editing their shared guidance:
+- `home/dot_claude/CLAUDE.md`
+- `home/dot_codex/AGENTS.md`
+- `home/dot_pi/agent/AGENTS.md`
+
 ## What's templated and why
 
 - **tmux**: shell path — `/opt/homebrew/bin/fish` (macOS) vs `/usr/bin/fish` (Linux)

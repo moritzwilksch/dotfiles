@@ -7,6 +7,8 @@ Library/
 .config/nvim/lazy-lock.json
 **/AGENTS.md
 AGENTS.md
+!.codex/AGENTS.md
+!.pi/agent/AGENTS.md
 {{ if ne .chezmoi.os "windows" }}
 .wezterm.lua
 {{ end }}
