@@ -83,4 +83,5 @@
     "use_system_clipboard": "never",
   },
   "relative_line_numbers": "enabled",
+  "file_scan_exclusions": ["__pycache__"],
 }
