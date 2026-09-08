@@ -1,0 +1,2 @@
+[hooks]
+transparent_prefixes = ["pixi run", "poetry run", "direnv exec ."]

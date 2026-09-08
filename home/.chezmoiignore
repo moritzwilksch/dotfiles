@@ -20,6 +20,7 @@ AGENTS.md
 .config/ghostty/
 .config/pixi/
 .config/lazygit/
+.config/rtk/
 run_onchange_install-packages.sh
 run_once_install-pixi.sh
 run_onchange_pixi-global-sync.sh
