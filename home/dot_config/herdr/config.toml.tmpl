@@ -33,7 +33,7 @@ close_tab = "prefix+shift+x"
 
 # --- workspaces (closest analog to tmux sessions) ---
 # tmux: bind-key s choose-tree (session switcher)
-workspace_picker = "prefix+s"
+workspace_picker = ["prefix+s", "ctrl+shift+h"]
 # moved off prefix+s, which herdr binds to settings by default
 settings = "prefix+shift+s"
 new_workspace = "prefix+shift+n"
@@ -92,7 +92,8 @@ navigate_workspace_down = "j"
 navigate_pane_up = "up"
 navigate_pane_down = "down"
 navigate_pane_left = "h"
-navigate_pane_right = "l"
+# Ctrl+Shift+L is local to navigate mode, so it only acts after sidebar focus.
+navigate_pane_right = ["l", "ctrl+shift+l"]
 
 [ui]
 # tmux: set -g mouse on
