@@ -1,6 +1,14 @@
 {
   "packages": [],
   "defaultThinkingLevel": "medium",
+  "enabledModels": [
+    "openai-codex/gpt-5.6-luna",
+    "openai-codex/gpt-5.6-terra",
+    "openai-codex/gpt-5.6-sol",
+    "google/gemini-3.8-flash",
+    "openrouter/deepseek/deepseek-v4.1-flash"
+  ],
   "theme": "dark",
-  "showCacheMissNotices": true
+  "showCacheMissNotices": true,
+  "lastChangelogVersion": "0.85.1"
 }
