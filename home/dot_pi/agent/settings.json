@@ -8,7 +8,11 @@
     "openai-codex/gpt-6-astra",
     "google/gemini-3.8-flash",
     "openrouter/deepseek/deepseek-v4.1-flash",
-    "openrouter/z-ai/glm-5.3-flash"
+    "openrouter/z-ai/glm-5.3-flash",
+    "fireworks/accounts/fireworks/models/glm-5p3-flash",
+    "fireworks/accounts/fireworks/models/deepseek-v4p1-flash",
+    "baseten/accounts/fireworks/models/glm-5p3-flash",
+    "baseten/accounts/fireworks/models/deepseek-v4p1-flash"
   ],
   "theme": "dark",
   "showCacheMissNotices": true,
