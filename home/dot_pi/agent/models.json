@@ -1,5 +1,42 @@
 {
   "providers": {
+    "baseten": {
+      "models": [
+        {
+          "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+          "name": "DeepSeek V4.1 Flash",
+          "reasoning": true,
+          "input": ["text", "image"],
+          "contextWindow": 1048576,
+          "maxTokens": 384000,
+          "thinkingLevelMap": {
+            "off": "none",
+            "minimal": "minimal",
+            "low": "low",
+            "medium": "medium",
+            "high": "high",
+            "xhigh": "xhigh",
+            "max": "max"
+          },
+          "cost": {
+            "input": 0.30,
+            "output": 1.20,
+            "cacheRead": 0.03,
+            "cacheWrite": 0
+          },
+          "compat": {
+            "supportsStore": false,
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "supportsUsageInStreaming": true,
+            "maxTokensField": "max_tokens",
+            "supportsStrictMode": true,
+            "supportsLongCacheRetention": false,
+            "thinkingFormat": "openai"
+          }
+        }
+      ]
+    },
     "openrouter": {
       "modelOverrides": {
         "deepseek/deepseek-v4.1-flash": {
