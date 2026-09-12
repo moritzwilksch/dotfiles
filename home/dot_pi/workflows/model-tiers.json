@@ -1,0 +1,7 @@
+{
+  "tiers": {
+    "small": "fireworks/accounts/fireworks/models/glm-5p3-flash:low",
+    "medium": "fireworks/accounts/fireworks/models/glm-5p3-flash:medium",
+    "big": "fireworks/accounts/fireworks/models/glm-5p3-flash:xhigh"
+  }
+}
