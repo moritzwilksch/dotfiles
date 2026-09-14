@@ -125,12 +125,11 @@ on-mode-changed = []
     alt-shift-l = 'move right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#resize
+    # alt-shift-arrows are deliberately left unbound so macOS keeps
+    # word-by-word navigation and selection in text fields.
     alt-minus = 'resize smart -50'
     alt-equal = 'resize smart +50'
-    alt-shift-left = 'resize width -50'
-    alt-shift-right = 'resize width +50'
-    alt-shift-up = 'resize height +50'
-    alt-shift-down = 'resize height -50'
+    alt-ctrl-r = 'mode resize'
     alt-shift-space = 'macos-native-minimize'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
@@ -221,3 +220,12 @@ on-mode-changed = []
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+# 'resize' binding mode declaration.
+# Stays in the mode so you can adjust repeatedly; esc returns to 'main'.
+[mode.resize.binding]
+    h = ['resize width -50', 'mode resize']
+    l = ['resize width +50', 'mode resize']
+    k = ['resize height +50', 'mode resize']
+    j = ['resize height -50', 'mode resize']
+    esc = 'mode main'
