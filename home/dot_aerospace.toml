@@ -75,6 +75,20 @@ on-mode-changed = []
     outer.top =        0
     outer.right =      0
 
+# Apps that always float instead of taking part in the tiling layout
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+if.window-title-regex-substring = '^(New Message|Re: |Fwd: )'
+run = 'layout floating'
+
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
