@@ -24,7 +24,8 @@ prefix = "ctrl+a"
 # tmux: bind-key c new-window
 new_tab = "prefix+c"
 # tmux: bind -n C-n next-window / bind -n C-p previous-window (no prefix, "fast" switch)
-next_tab = "ctrl+n"
+# ctrl+n went to new_worktree; next_tab keeps the prefix form only.
+next_tab = "prefix+n"
 previous_tab = "ctrl+p"
 # tmux: prefix+1..9 select-window
 switch_tab = "prefix+1..9"
@@ -39,6 +40,10 @@ settings = "prefix+shift+s"
 new_workspace = "prefix+shift+n"
 rename_workspace = "prefix+shift+w"
 close_workspace = "prefix+shift+d"
+# tmux has no worktree equivalent. herdr defaults to prefix+shift+g for new and
+# leaves open unset; both are direct chords here, so no prefix.
+new_worktree = "ctrl+n"
+open_worktree = "ctrl+o"
 # Direct bindings work regardless of which pane or sidebar surface is focused.
 next_workspace = "ctrl+shift+j"
 previous_workspace = "ctrl+shift+k"
