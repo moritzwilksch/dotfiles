@@ -6,6 +6,9 @@ cursor-style = block
 command = /opt/homebrew/bin/fish
 shell-integration = fish
 shell-integration-features = no-cursor,ssh-terminfo
+# Treat Option as Alt so Alt+Backspace (backward-kill-word) reaches the shell.
+# Ghostty's default depends on the keyboard layout and is false for non-US layouts.
+macos-option-as-alt = true
 macos-titlebar-style = tabs
 window-padding-balance = true
 window-padding-x = 10
