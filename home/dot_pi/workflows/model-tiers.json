@@ -1,7 +1,7 @@
 {
   "tiers": {
-    "small": "fireworks/accounts/fireworks/models/glm-5p3-flash:low",
-    "medium": "fireworks/accounts/fireworks/models/glm-5p3-flash:medium",
-    "big": "fireworks/accounts/fireworks/models/glm-5p3-flash:xhigh"
+    "small": "together/deepseek-ai/DeepSeek-V4.1-Flash:low",
+    "medium": "together/deepseek-ai/DeepSeek-V4.1-Flash:high",
+    "big": "together/deepseek-ai/DeepSeek-V4.1-Flash:xhigh"
   }
 }
