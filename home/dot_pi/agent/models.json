@@ -50,6 +50,36 @@
           }
         }
       }
+    },
+    "together": {
+      "modelOverrides": {
+        "deepseek-ai/DeepSeek-V4.1-Flash": {
+          "compat": {
+            "supportsReasoningEffort": true
+          },
+          "thinkingLevelMap": {
+            "minimal": null,
+            "low": "low",
+            "medium": null,
+            "high": "high",
+            "xhigh": "xhigh",
+            "max": "max"
+          }
+        },
+        "zai-org/GLM-5.3-Flash": {
+          "compat": {
+            "supportsReasoningEffort": true
+          },
+          "thinkingLevelMap": {
+            "minimal": null,
+            "low": "low",
+            "medium": null,
+            "high": "high",
+            "xhigh": null,
+            "max": "max"
+          }
+        }
+      }
     }
   }
 }

@@ -14,7 +14,9 @@
     "fireworks/accounts/fireworks/models/glm-5p3-flash",
     "fireworks/accounts/fireworks/models/deepseek-v4p1-flash",
     "baseten/zai-org/GLM-5.3-Flash",
-    "baseten/deepseek-ai/DeepSeek-V4.1-Flash"
+    "baseten/deepseek-ai/DeepSeek-V4.1-Flash",
+    "together/zai-org/GLM-5.3-Flash",
+    "together/deepseek-ai/DeepSeek-V4.1-Flash"
   ],
   "theme": "dark",
   "showCacheMissNotices": true,
