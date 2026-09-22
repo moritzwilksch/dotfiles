@@ -11,6 +11,8 @@
     "google/gemini-3.8-flash",
     "openrouter/deepseek/deepseek-v4.1-flash",
     "openrouter/z-ai/glm-5.3-flash",
+    "openrouter/xiaomi/mimo-v2.6-pro",
+    "openrouter/xiaomi/mimo-v2.6-flash",
     "fireworks/accounts/fireworks/models/glm-5p3-flash",
     "fireworks/accounts/fireworks/models/deepseek-v4p1-flash",
     "baseten/zai-org/GLM-5.3-Flash",
@@ -20,5 +22,5 @@
   ],
   "theme": "dark",
   "showCacheMissNotices": true,
-  "lastChangelogVersion": "0.86.1"
+  "lastChangelogVersion": "0.87.0"
 }
