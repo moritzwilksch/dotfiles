@@ -2,6 +2,8 @@
   "packages": [
     "npm:@quintinshaw/pi-dynamic-workflows"
   ],
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-6-luna",
   "defaultThinkingLevel": "medium",
   "enabledModels": [
     "openai-codex/gpt-5.6-luna",
