@@ -4,6 +4,7 @@ Chezmoi-managed dotfiles. Public repo — no secrets/employer info.
 For chezmoi concepts (naming conventions, templates, run scripts), see https://www.chezmoi.io/reference/.
 
 To import config edited directly in `~/`, use the `import-live-config` skill.
+After editing a chezmoi-managed file, run `chezmoi apply` for its target path so the live file reflects the source.
 
 ## Platforms
 
