@@ -3,7 +3,7 @@
     "npm:@quintinshaw/pi-dynamic-workflows"
   ],
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-6-luna",
+  "defaultModel": "gpt-6-sol",
   "defaultThinkingLevel": "medium",
   "enabledModels": [
     "openai-codex/gpt-5.6-luna",
